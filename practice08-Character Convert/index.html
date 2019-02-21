@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Character Convert</title>
+</head>
+<body>
+    
+    <h2>Create a function definition that achieves the output with the given input. </h2>
+
+    <p> Given the following function call: character_convert('the cat in the hat');</p>
+
+    <p>And the resulting output:</p>
+
+    <p>"11610410132999711632105110321161041013210497116"</p>
+
+    <p><a href="https://www.google.com/search?q=ascii&oq=ascii&aqs=chrome..69i57j69i60j69i59j69i60j0l2.1319j1j9&sourceid=chrome&es_sm=91&ie=UTF-8" target="_blank">hint</a></p>
+
+    <p>Optimization: How would you speed up the processing if you already encountered a value?</p>
+
+    <script>
+    const str = 'the cat in the hat';
+    function characterConvert (myStr) {
+        let result = ''
+        for (let i = 0; i < myStr.length; i++) {
+            result += myStr[i].charCodeAt();
+        }
+        return result;
+    }
+    console.log(characterConvert(str));
+    </script>
+
+</body>
+</html>
