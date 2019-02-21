@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Even Odds</title>
+</head>
+<body>
+    <h2>Even Odds</h2>
+
+    <h3>Build a function that takes one array and then sorts it into odd and even numbers </h3>
+    
+    <p>Write a function that takes one parameter</p>
+
+    <p>* Parameter 1 - an array of anything</p>
+
+    <p>The function should return an object with 2 arrays in it:</p>
+    <p>odd: an array of all the odd numbers in the array</p>
+    <p>even: an array of all the even numbers in the array</p>
+    <p>all non-number entities should be ignored</p>
+    <p>repeated numbers should not be added twice</p>
+    <p>Example: evenOdd([2,5,1,6,8,2,20,'cat',13,3]);</p>
+    <p></p>
+    <p>Output {</p>
+    <p>odd: [5, 1, 13, 3],</p>
+    <p>even: [2, 6, 8, 20]</p>
+    <p>}</p>
+
+    
+    <script>
+    
+    // Remove duplicates
+    var arr = [2, 5, 1, 6, 8, 2, 20, 'cat', 13, 3]
+    var darr = []
+    var duplicates = [];
+    for(var i = 0; i < arr.length; i++){
+    if(darr.includes(arr[i]) && !duplicates.includes(arr[i]))
+        duplicates.push(arr[i])
+    else
+        darr.push(arr[i]); // [2, 5, 1, 6, 8, 20, "cat", 13, 3]
+    }
+    // Even and Odd
+    const evenOdd = (arr) => {
+    let result = {
+        even: [],
+        odd: []
+    }
+    
+    arr.map (i => {
+        if (i % 2 === 0) {
+        result.even.push(i);
+        } else if (i % 2 === 1) {
+        result.odd.push(i);
+        } else {
+        "";
+        }
+    });
+    return result;
+    }
+    console.log(evenOdd(darr));
+    </script>
+</body>
+</html>
