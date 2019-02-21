@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sort Alphabetically</title>
+</head>
+<body>
+
+    <h2>Sort</h2>
+
+    <h3>Build a function that takes in an array of strings and outputs a new array with the same strings in alphabetical order.</h3>
+         
+    <p>Write a function that takes one parameter</p>
+        <p>* Parameter 1 - An Array of strings</p>
+
+        <p>The function should output an array containing all the strings from the input array but in alphabetical order</p>
+        <p>Example:</p>
+        <p>const myArray = ['mouse', 'cat', 'dog', 'human'];</p>
+        <p>sortArr(myArray);</p>
+        <p>Output - ['cat', 'dog', 'human', 'mouse']</p>
+        <p>Try doing this using a **Bubble Sort**, if you are unsure what that is <a href="https://www.google.com" target="_blank">Click Here</a></p>
+  
+
+    <script>
+ 
+    const myArray = ['mouse', 'cat', 'dog', 'human'];
+    const sortArr = (arr) => {
+        for (i = 0; i < arr.length; i++) {
+            for (k = 0; k < arr.length - 1; k++) {
+                if (arr[k].charCodeAt() > arr[(k + 1)].charCodeAt()) {
+                    var temp = arr[k];
+                    arr[k] = arr[k + 1];
+                    arr[k + 1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+    console.log(sortArr(myArray));
+   // var myArray = ['mouse', 'cat', 'dog', 'human'];
+    // function stringArray(myArray){
+    //     myArray.sort();
+    //     return myArray;
+    // }
+    //     console.log(stringArray(myArray));
+    </script>
+    
+</body>
+</html>
