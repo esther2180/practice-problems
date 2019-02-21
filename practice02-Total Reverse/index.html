@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Total Reverse</title>
+</head>
+<body>
+
+<h2>Total Reverse</h2>
+
+<h3>Build a function that takes in an array and reverses it</h3>
+
+<p>Write a function that takes one parameter</p>
+    <p>* Parameter 1 - An array of anything</p>
+
+    <p>The function should output an array that is in reverse order from the input array</p>
+    <p>Example:</p>
+    <p>var myArray = ['hello', 45, 'Bob', 'what', '23'];</p>
+    <p>arrayReverse(myArray);</p>
+    <p>Output - ['23', 'what', 'Bob', 45, 'hello']</p>
+    <p><i>Avoid using pre-built functions that do something similar</p>
+
+    <script>
+    const myArray = ['hello', 45, 'Bob', 'what', '23'];   
+        // const totalReverse = (arr) => {
+        //     const reverseArr = [];
+        //     for(let i = arr.length - 1; i >= 0; i--) {
+        //         reverseArr.push(arr[i]);
+        //     }
+        //     return reverseArr;
+        // }
+        // Using a reverse()
+        // const totalReverse = (arr) => {
+        //     arr.reverse();
+        //     return arr;
+        // }
+        //REVERSE AN ARRAY WITH ALL STRINGS
+        const myArray1 = ['hello', '45', 'Bob', 'what', '23']; 
+        const totalReverse = myArray1.map(el => {
+            const result = el.split('').reverse();
+            return result.join('');
+        })
+        console.log(totalReverse);
+    </script>
+</body>
+</html>
