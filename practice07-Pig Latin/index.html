@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pig Latin</title>
+</head>
+<body>
+    
+    <h2>Igpay Atinlay</h2>
+
+    <h3>Build a function that will translate text into "Pig Latin" Take the first consonant and move it to the end of a word and then affix "ay" to the end of that word."</h3>
+
+    <p>Write a function that takes one parameter</p>
+
+    <p>* Parameter 1 - A string</p>
+    <p>The function should output your input string translated into Pig Latin</p>
+
+    <p>Example:</p>
+    <p>var myString = "Hello my name is Stu"</p>
+    <p>translate(myString);</p>
+    <p>Output - `"ellohay ymay ameya siay tusay"</p>
+
+
+    <script>
+    
+    // const myString = "Hello my name is Stu";
+    
+    const translate = str => {
+       const splitStr = str.toLowerCase().split(" ");  //["hello", "my", "name", "is", "stu"]
+       const result = [];
+        for (let i = 0; i < splitStr.length; i++) {
+            const splitEachWord = splitStr[i].split(""); //["h", "e", "l", "l", "o"], ["m", "y"], ["n", "a", "m", "e"], ["i", "s"], ["s", "t", "u"]
+            const firstLetter = splitEachWord[0]; //h m n i s
+            
+            splitEachWord.shift();
+            // splitEachWord.shift();  [e", "l", "l", "o"], [y"], [a", "m", "e"], [s"], [t", "u"]
+            splitEachWord.push(firstLetter);
+            // splitEachWord.push(firstLetter);  [e", "l", "l", "o", "h"], [y", "m"], [a", "m", "e", "n"], [s", "i"], [t", "u", "s"]
+            splitEachWord.push("ay");
+            // splitEachWord.push("ay"); [e", "l", "l", "o", "h", "ay"], [y", "m", "ay"], [a", "m", "e", "n", "ay"], [s", "i", "ay"], [t", "u", "s", "ay"]
+            result.push(splitEachWord.join(""));
+        }
+        return result;
+    }
+    console.log(translate("Hello my name is Stu"));
+    
+    </script>
+
+</body>
+</html>
