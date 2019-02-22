@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do Math</title>
+</head>
+<body>
+
+    <h2>Do Math</h2>
+
+    <h3>Build a function, do_math, that takes in 3 parameters: num1 (number), num2 (number), and operator (string)</h3>
+
+    <p>it uses the operator to determine what math to do to the numbers</p>
+    <p>if '+', it adds them</p>
+    <p>if '-', it subtracts them</p>
+    <p>if '*' or 'x' or 'X', it multiplies them</p>
+    <p>if '/', it divides them</p>
+    <p>if then returns the result</p>
+
+    <p>Example:</p>
+    <p>doMath(5,2,'*')</p>
+    <p>Return: 10</p>
+
+    <script>
+    
+        const doMath = (num1, num2, op) => {
+            var total = 0;
+            switch(op) {
+                case "+":
+                    total = num1 + num2;
+                    break;
+                case "-":
+                    total = num1 - num2;
+                    break;
+                case "*":
+                    total = num1 * num2;
+                    break;
+                case "/":
+                    total = num1 / num2;
+                    break;
+                default:
+                    "NaN";
+                    break;
+            }
+            return total;
+        }
+        console.log(doMath(5, 2, "*"));
+
+
+    </script>
+    
+</body>
+</html>
