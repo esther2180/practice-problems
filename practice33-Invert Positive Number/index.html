@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invert Positive Number</title>
+</head>
+<body>
+    
+<h2>Invert Positive Number</h2>
+
+<h3>Build a function, invertNegatives, that takes a number as a parameter, and if the number is positive, it makes it negative.  If it isn't a number, it returns false</h3>
+
+<p>- invertNegatives(-5)</p>
+<p>- Returns: -5</p>
+<p>- invertNegatives(4000)</p>
+<p>- Returns: -4000</p>
+<p>- invertNegatives('puppies')</p>
+<p>- Returns: false</p>
+
+<script>
+
+const invertNegatives = num => {
+    if(typeof num === 'string') {
+        return false;
+    } else {
+        return -Math.abs(num);
+    }
+};
+
+console.log(invertNegatives(-5));
+console.log(invertNegatives(4000));
+console.log(invertNegatives('puppies'));
+
+</script>
+                
+</body>
+</html>
