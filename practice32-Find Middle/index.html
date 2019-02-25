@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Middle of String</title>
+</head>
+<body>
+
+<h2>Find Midlle of String</h2>
+
+<h3>Build a function, findMiddle, that finds the middle of a string.  If the string is an odd number of characters, it returns 1 letter.  If it is an even number of characters, it returns 2 characters.  It takes a string as a parameter</h3>
+
+<p>Example:</p>
+<p>findMiddle('seven')</p>
+<p>Return: 'v'</p>
+<p>find_middle_letters('dish')</p>
+<p>Return: 'is'</p>
+        
+
+<script>
+
+const findMiddle = str => {
+    let position, length;
+
+    if(str.length % 2 === 1) {
+        position = str.length / 2;
+        length = 1;
+    } else {
+        position = str.length / 2 - 1;
+        length = 2;
+    }
+    return str.substring(position, position + length);
+}
+
+console.log(findMiddle('dish'));
+console.log(findMiddle('seven'));
+
+</script>
+    
+</body>
+</html>
