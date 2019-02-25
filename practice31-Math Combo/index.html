@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math Combo</title>
+</head>
+<body>
+    
+<h2>Math Combo</h2>
+
+<h3>Build a function, cocoCombo, that takes 5 numbers as parameters. </h3>
+
+<p>It:</p>
+
+<p>- multiplies the 1st number x the 2nd number</p>
+<p>- the result of that, it adds the 3rd number</p>
+<p>- the result of that, it divides by the 4th number</p>
+<p>- the result of that, it subtracts the 5th number</p>
+<p>- it returns that result</p>
+<p>example:</p>
+<p>cocoCombo(3,2,6,3,5)</p>
+<p>Returns -1</p>
+
+
+<script>
+
+const cocoCombo = (num1, num2, num3, num4, num5) => {
+    const result = (((num1 * num2) + num3) / num4) - num5;
+    return result;
+};
+console.log(cocoCombo(3,2,6,3,5));
+
+</script>
+
+</body>
+</html>
