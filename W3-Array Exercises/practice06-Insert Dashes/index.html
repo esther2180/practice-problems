@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insert Dashes</title>
+</head>
+<body>
+
+    <h2>Insert Dashes</h2>
+
+    <h3>Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers.</h3>
+
+    <p>input: 025468</p>
+    <p>output: 0-254-6-8</p>
+
+
+    <script>
+    
+    const insertDash = num => {
+        let arr = [];
+        for(let i = 0; i < num.length; i++){
+            if((num[i] % 2 === 0) && num[i+1] % 2 === 0){
+                arr.push(num[i] + '-' );
+            } else {
+                arr.push(num[i]);
+            }    
+        }
+        return arr.join('');
+    }
+    console.log(insertDash('025468'));
+        
+    </script>
+    
+</body>
+</html>
