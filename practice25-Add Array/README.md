@@ -9,7 +9,7 @@ Create a function, add_arrays(), that does the following:
 
 #### Example:
 var first_array = [3,-5,15,4];
-var second_array = [3,18,-5,-4]
+var second_array = [3,18,-5,-4];
 
 
 output = add_arrays(first_array,second_array);
