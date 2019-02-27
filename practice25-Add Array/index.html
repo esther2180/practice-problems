@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Array</title>
+</head>
+<body>
+
+    <h2>Add Array</h2>
+
+    <h3>Create a function, addArrays(), that does the following:</h3>
+    
+    <p>Input: 2 arrays of equal size </p>
+    <p>- firstArray = [3,-5,15,4];</p>
+    <p>- secondArray = [3,18,-5,-4];</p>
+ 
+
+
+    <p>Output: - output array, which has all values from the first array added to the values from the second array</p>
+    <p>- outputs [6,13,10,0];</p>
+
+
+    <script>
+    
+    const firstArray = [3,-5,15,4];
+    const secondArray = [3,18,-5,-4];
+
+    const addArray = firstArray.map(function(num, index) {
+        return num + secondArray[index];
+    });
+
+    console.log(addArray);
+    
+    </script>
+</body>
+</html>
