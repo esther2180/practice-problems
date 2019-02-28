@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swap Case</title>
+</head>
+<body>
+
+<h2>Swap Case</h2>
+
+<h3>Write a JavaScript program which accept a string as input and swap the case of each character.</h3>
+
+<p>input: 'The Quick Brown Fox'</p>
+<p>output: 'tHE qUICK bROWN fOX'</p>
+
+
+    <script>
+    
+    const swapCase = function(letters){
+
+        let newLetters = "";
+            for(let i = 0; i < letters.length; i++){
+                if(letters[i] === letters[i].toLowerCase()){
+                    newLetters += letters[i].toUpperCase();
+                }else {
+                    newLetters += letters[i].toLowerCase();
+                }
+            }
+        return newLetters;
+    }
+
+    console.log(swapCase('The Quick Brown Fox'));
+
+    </script>
+    
+</body>
+</html>
