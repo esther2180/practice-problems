@@ -9,7 +9,7 @@
 - create variable to store vowels
 - begin loop
 	- get each letter, one at a time
-	- compare it with each each vowel and see if it matches
+	- compare it with each vowel and see if it matches
 		- if it is, add it to the vowel variable
 - repeat
 
