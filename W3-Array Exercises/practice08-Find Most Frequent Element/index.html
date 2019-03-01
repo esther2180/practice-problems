@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Most Frequent Element</title>
+</head>
+<body>
+
+    <h2>Find Most Frequent Element</h2>
+
+    <h3>Write a JavaScript program to find the most frequent item of an array.</h3>
+
+    <p>input: [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]</p>
+    <p>output: a( 5 times )</p>
+
+
+    <script>
+    
+    const arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+
+    let mostCount = 1;
+    let count = 0;
+    let item;
+
+    for (let i = 0 ; i < arr.length; i++) {         // take each element 
+        for (let j = i; j < arr.length; j++) {      // set back to [i] element and loop through
+            if (arr[i] === arr[j]) {                // if [i] from first loop & [j] from second loop matches
+                count++;                            // add to count
+            }
+            if (mostCount < count) {                // if mostCout < count
+                mostCount = count;                  // assign count to mostCount
+                item = arr[i]                       // and finally assign that element to item
+            }
+        }
+        count = 0;                                  // reassign count to 0
+    }
+    console.log(`${item} ( ${mostCount} times )`);
+
+    </script>
+    
+</body>
+</html>
