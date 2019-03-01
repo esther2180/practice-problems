@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find the Vowels</title>
+</head>
+<body>
+
+    <h2>Find the Vowels</h2>
+
+    <h3>given a string, find all the vowels in the string.  Store them in a new string</h3>
+
+    <p>input: "Four Score And Seven Years Ago"</p>
+    <p>output: "ouoeaeeeaao"</p>
+
+
+    <script>
+    
+    const findVowels = str => {
+        const vowels = "aeiou";
+        let result = "";
+
+        let string = str.toLowerCase(); 
+        
+        for (let letter of string) {
+            if(vowels.includes(letter)) {   
+                result += letter;
+            }
+        }
+        return result;
+    }
+    console.log(findVowels("Four Score And Seven Years Ago"));
+
+    </script>
+    
+</body>
+</html>
