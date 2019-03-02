@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Print Elements in an Array</title>
+</head>
+<body>
+
+    <h2>Print Elements in an Array</h2>
+
+    <h3>Write a JavaScript program which prints the elements of the following array.</h3>
+
+    <p>input: [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]</p>
+    <p>output: </p>
+    <p>"Row 0"</p>
+    <p>"1"</p>
+    <p>"2"</p>
+    <p>"1"</p>
+    <p>"24"</p>
+    <p>"Row 1"</p>
+    <p>"8"</p>
+    <p>"11"</p>
+    <p>"9"</p>
+    <p>"4"</p>
+    
+
+    <script>
+    
+    const arr1= [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+
+    const printEle = arr => {
+        for (let i = 0; i < arr.length; i++) {
+            console.log(`Row ${i}` );
+            for (let j = 0; j < arr[i].length; j++) {
+                console.log(arr[i][j]);
+            }
+        }
+    }
+    console.log(printEle(arr1));
+
+    </script>
+
+</body>
+</html>
