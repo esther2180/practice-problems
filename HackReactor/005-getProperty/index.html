@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Property</title>
+</head>
+<body>
+
+    <h2>Get Property</h2>
+
+    <h3>Write a function called "getProperty"</h3>
+
+    <p>Given an object and a key, "getProperty" returns the value of the property at the given key.</p>
+    <p><b>Notes:</b></p>
+
+    <p>* If there is no property at the given key, it should return undefined.</p>
+
+    <p>input: var obj = {
+                 key: 'value'
+              };</p>
+
+    <p>output: value</p>
+
+
+    <script>
+    
+    const obj = {
+        key: 'value'
+    };
+
+    const output = getProperty(obj, 'key');
+
+    function getProperty (obj, key) {
+        return (obj[key]) ? (obj[key]) : undefined;
+    }
+    console.log(output);
+        
+    </script>
+
+</body>
+</html>
