@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Randomize Array</title>
+</head>
+<body>
+
+    <h2>Randomize Array</h2>
+
+    <h3>Create a function, randomizeList(), that takes an array and ranzomizes the order, without resorting to the use of any pre-existing array methods.</h3>
+    
+    <p>input: an array of anything [1, 2, 3, 4, 5]</p>
+    <p>output: the original array, randomly arranged</p>
+
+
+    <script>
+    
+    const randomizeList = arr => {
+        for(let i = arr.length - 1; i > 0; i--) {
+            let random = Math.floor(Math.random() * (i + 1));
+            let temp = arr[i];
+            arr[i] = arr[random];
+            arr[random] = temp;
+        }
+        return `Original Array: [1, 2, 3, 4, 5], Randomly Arranged Array: ${arr}`;
+    }
+    console.log(randomizeList([1, 2, 3, 4, 5]));
+
+    </script>
+
+</body>
+</html>
