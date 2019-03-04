@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math Computation Sequences</title>
+</head>
+<body>
+
+    <h2>Math Computation Sequences</h2>
+
+    <h3>Create a function definition that achieves the output with the given input. </h3>
+
+    <p>input: - mathSequences(2,5);</p>
+
+    <p>output: - ["2+5=7", "2-5=-3", "2*5=10", "2/5=0.4"];</p>
+
+
+    <script>
+    
+    const mathSequences = (num1, num2) => {
+        const operator = ['+', '-', '*', '/'];
+        let result;
+        let answer = [];
+
+        for(let i in operator) {
+            switch(operator[i]) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+            }
+            const string = `${num1} ${operator[i]} ${num2} = ${result}`;
+            answer.push(string);
+        }
+        return answer;
+    }
+
+    console.log(mathSequences(2, 5));
+
+
+    </script>
+    
+</body>
+</html>
