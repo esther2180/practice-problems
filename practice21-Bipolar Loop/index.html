@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bipolar Loop</title>
+</head>
+<body>
+
+    <h2>Bipolar Loop</h2>
+
+    <h3>Create a single loop that simultaneously counts up on one variable, while counting down on another.  The only code inside the for loop should be a console.log that lists both variables.</h3>
+
+    <p>- hint: You can have multiple initiators, conditionals, and incrementers/decrementers in the same <em>for</em> loop.</p>
+
+
+    <script>
+
+    const bipolarLoop = num => {
+        for (let i = 0, j = num;  i < num, j >= 0; i++, j--) {
+            console.log(`This is i: ${i} / This is j: ${j}`);
+        }
+    }        
+    console.log(bipolarLoop(10));
+
+
+    </script>
+    
+</body>
+</html>
