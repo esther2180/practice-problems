@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Property</title>
+</head>
+<body>
+
+    <h2>Add Property</h2>
+
+    <h3>Write a function called "addProperty"</h3>
+
+    <p>Given an object and a key, "addProperty" returns the value of the property on the given object with a value of true.</p>
+
+    <p>var myObj = {};</p>
+
+    <p>addProperty(myObj, 'myProperty');</p>
+
+    <p>console.log(myObj.myProperty); // --> true</p>
+
+
+    <script>
+    
+    const addProperty = (obj, key) => {
+        obj[key] = true;
+        return obj;
+    }
+
+    const myObj = {};
+    addProperty(myObj, 'myProperty');
+    console.log(myObj.myProperty);
+
+    </script>
+
+</body>
+</html>
