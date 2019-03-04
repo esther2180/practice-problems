@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove Property</title>
+</head>
+<body>
+
+    <h2>Remove Property</h2>
+
+    <h3>Write a function called "removeProperty"</h3>
+
+    <p>Given an object and a key, "removeProperty" removes the given key from the given object.</p>
+
+    <p>var obj = {};</p>
+
+    <p>removeProperty(obj, 'name');</p>
+
+    <p>console.log(obj.name); // --> undefined</p>
+
+
+    <script>
+    
+    const removeProperty = (obj, key) => {
+        delete obj[key];
+        return obj;
+    }
+
+    const obj = {};
+    removeProperty(obj, 'name');
+    console.log(obj.name);
+
+    </script>
+
+</body>
+</html>
