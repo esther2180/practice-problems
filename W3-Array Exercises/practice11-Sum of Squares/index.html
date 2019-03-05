@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sum of Squares</title>
+</head>
+<body>
+
+    <h2>Sum of Squares</h2>
+
+    <h3> Write a JavaScript program to find the sum of squares of a numeric vector.</h3>
+
+    <p>input: [0,1,2,3,4]</p>
+
+    <p>output: 30</p>
+
+
+    <script>
+    
+    const sumSquares = arr => {
+        let result = 0;
+        let i = arr.length;
+
+        while (i--) {
+            result += Math.pow(arr[i], 2);
+        }
+        return result;
+    }
+    console.log(sumSquares([0,1,2,3,4]));
+    
+    </script>
+    
+</body>
+</html>
