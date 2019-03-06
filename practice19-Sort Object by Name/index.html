@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sort Object by Name</title>
+</head>
+<body>
+
+    <h2>Sort Object by Name</h2>
+
+    <h3>Create a function, sortObjectListByName(), that does the following:</h3>
+    <h3>- Takes a list of objects, and returns an array of those objects, sorted by their property 'name'</h3>
+
+    <p>input: an array of objects</p>
+    <p>output: an array sorted by the 'name' field of each object</p>
+
+
+
+    <script>
+    
+    var inputArray = 
+    [
+	{name: 'John', age:42, gender:'M'},
+	{name: 'Jack', age:34, gender:'M'},
+	{name: 'Michael',age:40, gender: 'M'},
+	{name: 'Kendra',age:48, gender:'F'}
+    ]
+
+    const sortObjectListByName = arr => {
+        const findFactor = inputArray.sort((a, b) => a.name > b.name ? 1 : -1);
+        return findFactor;
+    }
+    console.log(sortObjectListByName(inputArray));
+    
+    </script>
+    
+</body>
+</html>
