@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check Age</title>
+</head>
+<body>
+
+    <h2>Check Age</h2>
+
+    <h3>Write a function called "checkAge". </h3>
+
+    <p>Given a person's name and age, "checkAge" returns one of two messages:</p>
+
+    <p>"Go home, {insert_name_here}!", if they are younger than 21.</p>
+
+    <p>"Welcome, {insert_name_here}!", if they are 21 or older.</p>
+
+    <p>Naturally, replace "{insert_name_here}" with the given name. :)</p>
+
+    <p>var output = checkAge('Adrian', 22);</p>
+
+    <p>console.log(output); // --> 'Welcome, Adrian!'</p>
+
+
+    <script>
+    
+    const checkAge = (name, age) => {
+        const howOld = (age >= 21) ? `Welcome, ${name}!` : `Go home, ${name}!`;
+        return howOld;
+    }
+    console.log(checkAge('Adrian', 22));
+
+    </script>
+
+</body>
+</html>
