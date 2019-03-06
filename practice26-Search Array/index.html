@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search Array (Needle in a Haystack)</title>
+</head>
+<body>
+
+    <h2>Create a function, searchArray(), that does the following:</h2>
+
+    <h3>input: 2 arrays</h3>
+    <p>- haystack array, which has values to search through</p>
+    <p>- needle array, which has values to search for </p>
+
+    <h3>output: </h3>
+    <p>- output array, which has all values in needle that are found in haystack</p>
+
+    <h4>Example: </h4>
+    <p>var haystack = ['cat','dog','bird','turtle','lizard'];</p>
+    <p>var needle = ['dog','lizard','flower','monkey','unicorn']</p>
+    <p>var output = null;</p>
+
+    <p>output = searchArray(haystack,needle);</p>
+    <p>console.log(output); //outputs ['dog','lizard'];</p>
+
+
+    <script>
+
+    const haystacks = ['cat','dog','bird','turtle','lizard'];
+    const needles = ['dog','lizard','flower','monkey','unicorn'];
+    
+    const searchArray = (arr1, arr2) => {
+        let result = [];
+        let temp = null;
+
+        for(let i of arr1) {
+            temp = i;
+            
+            for(let j of arr2) {
+                if(temp === j) {
+                    result.push(j);
+                }
+            }
+        }
+        return result;
+    }
+    console.log(searchArray(haystacks, needles));
+
+
+    // const searchArray = (arr1, arr2) => {
+    //     let result = [];
+    //     let temp = null;
+
+    //     for(let i = 0; i < arr1.length; i++) {
+    //         temp = arr1[i];
+            
+    //         for(let j = 0; j < arr2.length; j++) {
+    //             if(temp === arr2[j]) {
+    //                 result.push(arr2[j]);
+    //             }
+    //         }
+    //     }
+    //     return result;
+    // }
+
+
+    
+    </script>
+    
+</body>
+</html>

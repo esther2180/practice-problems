@@ -1,4 +1,4 @@
-Create a function, search_array(), that does the following:
+Create a function, searchArray(), that does the following:
 
 #### Input: 2 arrays
 - haystack array, which has values to search through
