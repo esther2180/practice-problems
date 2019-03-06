@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sort by Field</title>
+</head>
+<body>
+    
+    <h2>Sort by Field</h2>
+
+    <h3>Create a function, sortObjectListByField(), that does the following:</h3>
+    <h3>- Takes a list of objects, and returns an array of those objects, sorted by an arbitrary property</h3>
+
+    <p>- input_array: an array of objects</p>
+    <p>- sort_field: property to sort by</p>
+
+    <p>- output_array, an array sorted by the given field of each object</p>
+
+
+    <script>
+
+    const inputArray = 
+    [
+        {name: 'John', age:42, gender:'M'},
+        {name: 'Jack', age:34, gender:'M'},
+        {name: 'Michael',age:40, gender: 'M'},
+        {name: 'Kendra',age:48, gender:'F'}
+    ]
+
+    
+    const sortObjectListByField = (arr, category) => {
+        const field = arr.sort((a, b) => a[category] > b[category ]? 1 : -1);
+        return field;
+    }
+    console.log(sortObjectListByField(inputArray, 'age'));
+   
+    
+    </script>
+
+</body>
+</html>
