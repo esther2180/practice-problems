@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sum and Product of an Array Integers</title>
+</head>
+<body>
+
+    <h2>Sum and Product of an Array Integers</h2>
+
+    <h3>Write a JavaScript program to compute the sum and product of an array of integers.</h3>
+
+    <p>input: [1, 2, 3, 4, 5, 6]</p>
+
+    <p>output: "Sum: 21 and Product: 720"</p>
+
+
+    <script>
+    
+    const sumProdArr = arr => {
+        const sum = arr.reduce((prev, cur, index) => prev + cur, 0);  
+        const prod = arr.reduce((prev, cur) => prev * cur);
+        return `Sum: ${sum} and Product: ${prod}`;
+    }
+    console.log(sumProdArr([1, 2, 3, 4, 5, 6]));
+
+
+    </script>
+    
+</body>
+</html>
