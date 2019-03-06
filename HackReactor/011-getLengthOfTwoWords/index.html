@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Length of Two Words</title>
+</head>
+<body>
+
+    <h2>Get Length of Two Words</h2>
+
+    <h3>Write a function called "getLengthOfTwoWords".</h3>
+
+    <p>Given 2 words, "getLengthOfTwoWords" returns the sum of their lengths.</p>
+
+    <p>var output = getLengthOfTwoWords('some', 'words');</p>
+
+    <p>console.log(output); // --> 9</p>
+
+    
+    <script>
+    
+    const getLengthOfTwoWords = (word1, word2) => {
+        const newWord = word1.concat(word2);
+        return newWord.length;
+    }
+    console.log(getLengthOfTwoWords('some', 'words'));
+    
+    </script>
+
+</body>
+</html>
