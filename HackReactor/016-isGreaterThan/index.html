@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Greater Than</title>
+</head>
+<body>
+    
+    <h2>Is Greater Than</h2>
+
+    <h3>Write a function called "isGreaterThan".</h3>
+
+    <p>Given 2 numbers, "isGreaterThan" returns whether num2 is greater than num1.</p>
+
+    <p>var output = isGreaterThan(11, 10);</p>
+
+    <p>console.log(output); // --> false</p>
+
+
+    <script>
+    
+    const isGreaterThan = (num1, num2) => {
+        const biggerNum = (num1 >= num2) ? false : true;
+        return biggerNum;
+    }
+
+    console.log(isGreaterThan(11, 10));
+
+    </script>
+
+</body>
+</html>
