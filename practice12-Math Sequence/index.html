@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Math Sequence</title>
+</head>
+<body>
+
+    <h2>Math Sequence</h2>
+
+    <h3>Create a function definition that achieves the output with the given input. </h3>
+
+    <p>input: - mathSequence(2);</p>
+    <p>output: - [4, 6, 8, 10, 12, 14, 16, 18, 20, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5];</p>
+
+    <p>input: - mathSequence(5);</p>
+    <p>output: - [10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42];</p>
+    
+
+    <script>
+    
+    const mathSequence = num => {
+        let result = [];
+        let temp;
+
+        for(let i = num * 2; i < num + 38; i+=2){
+            (i > num * 10) ? temp = i / 4 : temp = i;
+            result.push(temp);
+        }
+            return result;
+    }
+
+    console.log(mathSequence(2));
+    console.log(mathSequence(5));
+    
+
+    </script>
+
+</body>
+</html>
