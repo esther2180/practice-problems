@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Even and Greater than 10</title>
+</head>
+<body>
+
+    <h2>Is Even and Greater than 10</h2>
+
+    <h3>Write a function called "isEvenAndGreaterThanTen".</h3>
+
+    <p>Given a number, "isEvenAndGreaterThanTen" returns whether it is both even and greater than 10.</p>
+
+    <p>var output = isEvenAndGreaterThanTen(13);</p>
+
+    <p>console.log(output); // --> false</p>
+
+
+    <script>
+    
+    const isEvenAndGreaterThanTen = num => {
+        const isEven = (num % 2 === 0 && num > 10) ? true : false;
+        return isEven;
+    }  
+    console.log(isEvenAndGreaterThanTen(13));
+
+    </script>
+    
+</body>
+</html>
