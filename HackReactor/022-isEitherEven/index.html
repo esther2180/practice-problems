@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Either Even</title>
+</head>
+<body>
+
+    <h2>Is Either Even</h2>
+
+    <h3>Write a function called "isEitherEven".</h3>
+
+    <p>Given two numbers, "isEitherEven" returns whether or not either one of the given numbers is even.</p>
+
+    <p>var output = isEitherEven(1, 4);</p>
+
+    <p>console.log(output); // --> true</p>
+
+
+    <script>
+    
+    const isEitherEven = (num1, num2) => {
+        const isEven = (num1 % 2 === 0 || num2 % 2 === 0) ? true : false;
+        return isEven;
+    }
+    console.log(isEitherEven(1, 4));
+
+    </script>
+    
+</body>
+</html>
