@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Duplicate Values in an Array</title>
+</head>
+<body>
+    <h2>Duplicate Values in an Array</h2>
+
+    <h3>Write a JavaScript program to find duplicate values in a JavaScript array.</h3>
+
+    <p>input: [1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]</p>
+
+    <p>output: [4 , 7]</p>
+
+    <script>
+
+    const arrays = [1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6];
+        console.log([...new Set(
+            arrays.filter((array, index, self) => self.indexOf(array) !== index))]
+        );
+
+    
+    </script>
+    
+</body>
+</html>
