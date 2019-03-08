@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Even Length</title>
+</head>
+<body>
+
+    <h2>Is Even Length</h2>
+
+    <h3>Write a function called "isEvenLength".</h3>
+
+    <p>Given a word, "isEvenLength" returns whether the length of the word is even.</p>
+
+    <p>var output = isEvenLength('wow');</p>
+
+    <p>console.log(output); // --> false</p>
+
+
+    <script>
+    
+    const isEvenLength = word => {
+        const isEven = (word.length % 2 === 0) ? true : false;
+        return isEven;
+    }  
+    console.log(isEvenLength('wow'));
+
+    </script>
+    
+</body>
+</html>
