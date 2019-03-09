@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compute Average Length of Words</title>
+</head>
+<body>
+
+    <h2>Compute Average Length of Words</h2>
+
+    <h3>Write a function called "computeAverageLengthOfWords".</h3>
+
+    <p>Given two words, "computeAverageLengthOfWords" returns the average of their lengths.</p>
+
+    <p>var output = computeAverageLengthOfWords('code', 'programs');</p>
+
+    <p>console.log(output); // --> 6</p>
+
+
+    <script>
+    
+    const computeAverageLengthOfWords = (word1, word2) => {
+        return (word1.length + word2.length) / 2;
+    }  
+    console.log(computeAverageLengthOfWords('code', 'programs'));
+
+    </script>
+    
+</body>
+</html>
