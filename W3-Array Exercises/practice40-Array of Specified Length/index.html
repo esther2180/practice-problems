@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Generate Specified Length</title>
+</head>
+<body>
+    <h2>Generate Specified Length</h2>
+
+    <h3>Write a JavaScript function to generate an array of specified length, filled with integer numbers, increase by one from starting position.</h3>
+
+    <p>input: console.log(arrayRange(1, 4)); </p>
+
+    <p>output: [1, 2, 3, 4]</p>
+
+    <p>input: console.log(arrayRange(-6, 4));</p>
+
+    <p>output: [-6, -5, -4, -3]</p>
+
+    <script>
+
+    const arrayRange = (start, length) => {
+        let arr = new Array(length);
+        
+        for(let i = 0; i < length; i++, start++) {
+            arr[i] = start;
+        }
+        return arr;
+    }
+    console.log(arrayRange(1, 4));
+
+    </script>
+    
+</body>
+</html>
