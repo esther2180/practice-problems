@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Old Enough To Vote</title>
+</head>
+<body>
+
+    <h2>Is Old Enough To Vote</h2>
+
+    <h3>Write a function called "isPersonOldEnoughToVote".</h3>
+
+    <p>Given a "person" object, that contains an "age" property, "isPersonOldEnoughToVote" returns whether the given person is old enough to vote.</p>
+
+    <p>* The legal voting age in the United States is 18.</p>
+
+    <p>var obj = {
+        age: 19
+    };</p>
+
+    <p>var output = isPersonOldEnoughToVote(obj);</p>
+
+    <p>console.log(output); // --> true</p>
+    
+
+    <script>
+        
+        const obj = {
+            age: 19
+        };
+
+        const isPersonOldEnoughToVote = person => {
+            const result = (person.age >= 18) ? true : false;
+            return result;
+        }
+        const output = isPersonOldEnoughToVote(obj);
+        console.log(output);
+        
+    </script>
+    
+</body>
+</html>
