@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Person Old Enough To Drink And Drive</title>
+</head>
+<body>
+
+    <h2>Is Person Old Enough To Drink And Drive</h2>
+
+    <h3>Write a function called "isPersonOldEnoughToDrinkAndDrive".</h3>
+
+    <p>Given a "person" object, that contains an "age" property, "isPersonOldEnoughToDrinkAndDrive" returns whether the given person is old enough to legally drink and drive in the United States.</p>
+
+    <p> * The legal drinking age in the United States is 21.</p>
+
+    <p>* The legal driving age in the United States is 16.</p>
+
+    <p>* It is always illegal to drink and drive in the United States.</p>
+
+    <p>var obj = {
+        age: 45
+    };</p>
+
+    <p>var output = isPersonOldEnoughToDrinkAndDrive(obj);</p>
+
+    <p>console.log(output); // --> true</p>
+
+
+   <script>
+
+    const obj = {
+        age: 45
+    };
+   
+   const isPersonOldEnoughToDrinkAndDrive = person => {
+    const result = (person.age >= 16 && person.age >= 21) ? true : false;
+    return result;
+   }
+   var output = isPersonOldEnoughToDrinkAndDrive(obj);
+   console.log(output);
+   
+   </script>
+ 
+</body>
+</html>
