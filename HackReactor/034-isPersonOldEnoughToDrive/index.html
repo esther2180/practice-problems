@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Person Old Enough To Drive</title>
+</head>
+<body>
+    
+    <h2>Is Person Old Enough To Drive</h2>
+
+    <h3>Write a function called "isPersonOldEnoughToDrive".</h3>
+
+    <p>Given a "person" object, that contains an "age" property, "isPersonOldEnoughToDrive" returns whether the given person is old enough to drive.</p>
+
+    <p>* The legal driving age in the United States is 16.</p>
+
+    <p>var obj = {
+        age: 16
+    };</p>
+
+    <p>var output = isPersonOldEnoughToDrive(obj);</p>
+
+    <p>console.log(output); // --> true</p>
+
+    
+    <script>
+
+    var obj = {
+        age: 16
+    };
+    
+    const isPersonOldEnoughToDrive = person => {
+        const result = (person.age >= 16) ? true : false;
+        return result;
+    }
+
+    const output = isPersonOldEnoughToDrive(obj);
+    console.log(output);
+    
+    </script>
+
+</body>
+</html>
