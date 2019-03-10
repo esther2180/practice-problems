@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Object Property</title>
+</head>
+<body>
+
+    <h2>Add Object Property</h2>
+
+    <h3>Write a function called "addObjectProperty".</h3>
+
+    <p>Given two objects and a key, "addObjectProperty" sets a new property on the 1st object at the given key. The value of that new property is the entire 2nd object.</p>
+
+    <p>var person1 = {
+        name: 'Joe Blow',
+        role: 'schlub'
+    };</p>
+
+    <p>var person2 = {
+        name: 'Mr. Burns',
+        role: 'supervisor'
+    };</p>
+
+    <p>addObjectProperty(person1, 'manager', person2);</p>
+    <p>console.log(person1.manager); // --> { name: 'Mr. Burns', role: 'supervisor' }</p>
+
+
+    <script>
+
+    const person1 = {
+        name: 'Joe Blow',
+        role: 'schlub'
+    };
+
+    const person2 = {
+        name: 'Mr. Burns',
+        role: 'supervisor'
+    }
+    
+    const addObjectProperty = (obj1, key, obj2) => {
+        obj1[key] = obj2;
+        return obj1;
+    };
+
+    addObjectProperty(person1, 'manager', person2);
+    console.log(person1.manager);
+
+    
+    </script>
+    
+</body>
+</html>
