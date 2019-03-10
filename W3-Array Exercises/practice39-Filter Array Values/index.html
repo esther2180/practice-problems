@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter Array Values</title>
+</head>
+<body>
+    
+    <h2>Filter Array Values</h2>
+
+    <h3>Write a JavaScript function to filter false, null, 0 and blank values from an array.</h3>
+
+    <p>input: console.log(filterArrayValues([58, '', 'abcd', true, null, false, 0]));</p>
+
+    <p>output: [58, "abcd", true]</p>
+
+
+    <script>
+    
+        const filterArrayValues = arr => {
+            arr = arr.filter(isEligible);
+            return arr;
+        }
+
+        const isEligible = value => {
+            const result = (value !== false || value !== null || value !== 0 || value !== "") ? value : '';
+            return result;
+        }
+        console.log(filterArrayValues([58, '', 'abcd', true, null, false, 0]));
+    
+    </script>
+
+
+</body>
+</html>
