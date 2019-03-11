@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove an Element of an Array</title>
+</head>
+<body>
+
+    <h2>Remove an Element of an Array</h2>
+
+    <h3>Write a JavaScript function to remove a specific element from an array.</h3>
+
+    <p>input: console.log(removeArrayElement([2, 5, 9, 6], 5));</p>
+
+    <p>output: [2, 9, 6]</p>
+
+    <script>
+    
+    const removeArrayElement = (arr, el) => {
+        const result = arr.filter(value => {
+            return value !== el;
+        });
+        return result;
+    }
+    console.log(removeArrayElement([2, 5, 9, 6], 5));
+
+    </script>
+    
+</body>
+</html>
