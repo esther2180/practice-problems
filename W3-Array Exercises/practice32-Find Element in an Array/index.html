@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find an Element in an Array</title>
+</head>
+<body>
+
+    <h2>Find an Element in an Array</h2>
+
+    <h3>Write a JavaScript function to find an array contains a specific element.</h3>
+
+    <p>arr = [2, 5, 9, 6];</p>
+
+    <p>console.log(contains(arr, 5)); => true</p>
+
+
+    <script>
+    
+    const arrays = [2, 5, 9, 6];
+
+    const findArray = (array, el) => {
+        for (let array of arrays) {
+            if (array === el) {
+                return true;
+            }
+        }
+        return false;
+    }
+    console.log(findArray(arrays, 5));
+    
+    </script>
+    
+
+    
+</body>
+</html>
