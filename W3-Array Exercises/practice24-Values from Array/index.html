@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Values from Array</title>
+</head>
+<body>
+
+    <h2>Values from Array</h2>
+
+    <h3>Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array.</h3>
+
+    <p>Sample array : [NaN, 0, 15, false, -22, '',undefined, 47, null]</p>
+
+    <p>Expected result : [15, -22, 47]</p>
+
+
+    <script>
+    const array1 = [NaN, 0, 15, false, -22, '',undefined, 47, null];
+
+    const valuesFromArray = arr => {
+        return arr.filter(value => {
+            return value;
+        });
+    };
+    console.log(valuesFromArray(array1));
+    
+    </script>
+    
+
+    
+</body>
+</html>
