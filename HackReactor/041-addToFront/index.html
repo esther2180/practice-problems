@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add To Front</title>
+</head>
+<body>
+
+    <h2>Add To Front</h2>
+
+    <h3>Write a function called "addToFront".</h3>
+
+    <p>Given an array and an element, "addToFront" adds the given element to the front of the given array, and returns the given array.</p>
+
+    <p>* It should be the SAME array, not a new array.</p>
+
+    <p>var output = addToFront([1, 2], 3);</p>
+
+    <p>console.log(output); // -> [3, 1, 2]</p>
+
+
+    <script>
+
+    var output = addToFront([1, 2], 3);
+    
+    function addToFront(arr, element) {
+        arr.unshift(element);
+        return arr;
+    }
+    console.log(output)
+
+    </script>
+    
+</body>
+</html>
