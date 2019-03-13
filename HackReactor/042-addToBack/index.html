@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add To Back</title>
+</head>
+<body>
+
+    <h2>Add To Back</h2>
+
+    <h3>Write a function called "addToBack".</h3>
+
+    <p>Given an array and an element, "addToBack" adds the given element to the back of the given array, and returns the given array.</p>
+
+    <p>* It should be the SAME array, not a new array.</p>
+
+    <p>var output = addToBack([1, 2], 3);</p>
+
+    <p>console.log(output); // -> [1, 2, 3]</p>
+
+
+    <script>
+
+    var output = addToBack([1, 2], 3);
+    
+    function addToBack(arr, element) {
+        arr.push(element);
+        return arr;
+    }
+    console.log(output)
+
+    </script>
+    
+</body>
+</html>
