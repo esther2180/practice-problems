@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Elements After</title>
+</head>
+<body>
+
+    <h2>Get Elements After</h2>
+
+    <h3>Write a function called "getElementsAfter".</h3>
+
+    <p>Given an array and an index, "getElementsAfter" returns a new array with all the elements after (but not including) the given index.</p>
+
+    <p>var output = getElementsAfter(['a', 'b', 'c', 'd', 'e'], 2);</p>
+
+    <p>console.log(output); // --> ['d', 'e']</p>
+
+
+    <script>
+        
+    const getElementsAfter = (array, n) => array.slice(n + 1);
+    const output = getElementsAfter(['a', 'b', 'c', 'd', 'e'], 2);
+
+    console.log(output);
+
+    </script>
+    
+</body>
+</html>
