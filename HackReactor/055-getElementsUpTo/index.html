@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Elements Up To</title>
+</head>
+<body>
+
+    <h2>Get Elements Up To</h2>
+
+    <h3>Write a function called "getElementsUpTo".</h3>
+
+    <p>Given an array and an index, "getElementsUpTo" returns a new array with all the elements after (but not including) the given index.</p>
+
+    <p>var output = getElementsUpTo(['a', 'b', 'c', 'd', 'e'], 2);</p>
+
+    <p>console.log(output); // --> ['a', 'b', 'c']</p>
+
+
+    <script>
+        
+    const getElementsUpTo = (array, n) => array.slice(0, n);
+    const output = getElementsUpTo(['a', 'b', 'c', 'd', 'e'], 3);
+
+    console.log(output);
+
+    </script>
+    
+</body>
+</html>
