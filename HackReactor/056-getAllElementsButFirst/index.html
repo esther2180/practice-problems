@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get All Elements But First</title>
+</head>
+<body>
+
+    <h2>Get All Elements But First</h2>
+
+    <h3>Write a function called "getAllElementsButFirst".</h3>
+
+    <p>Given an array, "getAllElementsButFirst" returns an array with all the elements but the first.</p>
+
+    <p>var input = [1, 2, 3, 4];</p>
+
+    <p>var output = getAllElementsButFirst(input);</p>
+
+    <p>console.log(output); // --> [2, 3, 4]</p>
+
+
+    <script>
+    
+    const getAllElementsButFirst = array => array.slice(1);
+    console.log( getAllElementsButFirst([1, 2, 3, 4]));
+
+    </script>
+    
+</body>
+</html>
