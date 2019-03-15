@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get All Elements But Last</title>
+</head>
+<body>
+
+    <h2>Get All Elements But Last</h2>
+
+    <h3>Write a function called "getAllElementsButLast".</h3>
+
+    <p>Given an array, "getAllElementsButLast" returns an array with all the elements but the last.</p>
+
+    <p>var input = [1, 2, 3, 4];</p>
+
+    <p>var output = getAllElementsButLast(input);</p>
+
+    <p>console.log(output); // --> [1, 2 , 3]</p>
+
+
+    <script>
+    
+    const getAllElementsButLast = array => array.splice(0, array.length - 1);
+    console.log(getAllElementsButLast([1, 2, 3, 4]));
+    
+    </script>
+    
+</body>
+</html>
