@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove From Back Of New</title>
+</head>
+<body>
+
+    <h2>Remove From Back Of New</h2>
+
+    <h3>Given an array, "removeFromBackOfNew" returns a new array containing all but the last element of the given array.</h3>
+
+    <p>var arr = [1, 2, 3];</p>
+
+    <p>var output = removeFromBackOfNew(arr);</p>
+
+    <p>console.log(output); // --> [1, 2]</p>
+    
+
+    <script>
+
+    const removeFromBackOfNew = arr => arr.slice(0, arr.length - 1);
+    console.log(removeFromBackOfNew([1, 2, 3]));
+    
+    </script>
+    
+</body>
+</html>
