@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove From Front</title>
+</head>
+<body>
+
+    <h2>Remove From Front</h2>
+
+    <h3>Write a function called "removeFromFront".</h3>
+
+    <p>Given an array, "removeFromFront" returns the given array with its first element removed.</p>
+
+    <p>var output = removeFromFront([1, 2, 3]);</p>
+
+    <p>console.log(output); // --> [2, 3]</p>
+
+    
+    <script>
+    
+    const removeFromFront = arr => {
+        arr.shift();
+        return arr;
+    }
+    console.log(removeFromFront([1, 2, 3]));
+    
+    </script>
+    
+</body>
+</html>
