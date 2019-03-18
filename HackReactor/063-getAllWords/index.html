@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get All Words</title>
+</head>
+<body>
+
+    <h2>Get All Words</h2>
+
+    <h3>Given a sentence, "getAllWords" returns an array containing every word in the sentence.</h3>
+
+    <p>var output = getAllWords('Radagast the Brown');</p>
+
+    <p>console.log(output); // --> ['Radagast', 'the', 'Brown']</p>
+
+
+    <script>
+    
+    const getAllWords = str => {
+        return (str.length === 0) ? [] : str.split(' ');
+    }
+    console.log(getAllWords('Radagast the Brown'));
+    
+    </script>
+    
+</body>
+</html>
