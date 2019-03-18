@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count Character</title>
+</head>
+<body>
+
+    <h2>Count Character</h2>
+
+    <h3>Given a string input and a character, "countCharacter" returns the number of occurences of a given character in the given string.</h3>
+
+    <p>var output = countCharacter('I am a hacker', 'a');</p>
+
+    <p>console.log(output); // --> 3</p>
+
+
+    <script>
+    
+    const countCharacter = (str, char) => {
+        let count = 0;
+
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === char) {
+                count++;
+            }
+        }
+        return count;
+    }
+    console.log(countCharacter('I am a hacker', 'a'));
+    
+    </script>
+    
+</body>
+</html>
