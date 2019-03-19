@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove From Back</title>
+</head>
+<body>
+
+    <h2>Remove From Back</h2>
+
+    <h3>Given an array, "removeFromBack" returns the given array with its last element removed.</h3>
+
+    <p>var output = removeFromBack([1, 2, 3]);</p>
+
+    <p>console.log(output); // --> [1, 2]</p>
+
+    
+    <script>
+    
+    const removeFromBack = arr => {
+        arr.pop();
+        return arr;
+    }
+    console.log(removeFromBack([1, 2, 3]));
+    
+    </script>
+    
+</body>
+</html>
