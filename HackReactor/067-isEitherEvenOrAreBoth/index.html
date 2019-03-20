@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Either Even Or Are Both</title>
+</head>
+<body>
+
+    <h2>Is Either Even Or Are Both</h2>
+
+    <h3>Write a function called "isEitherEvenOrAreBoth7".</h3>
+
+    <p>var output = isEitherEvenOrAreBoth7(3, 7);</p>
+
+    <p>console.log(output); // --> false</p>
+
+    <p>var output = isEitherEvenOrAreBoth7(2, 3);</p>
+
+    <p>console.log(output); // --> true</p>
+
+    
+    <script>
+    
+    const isEitherEvenOrAreBoth7 = (num1, num2) => {
+        return (num1 % 2 === 0 || num2 % 2 === 0 || (num1 === 7 && num2 === 7)) ? true : false;
+    }
+    console.log(isEitherEvenOrAreBoth7(2, 3));
+
+    
+    </script>
+    
+
+    
+</body>
+</html>
