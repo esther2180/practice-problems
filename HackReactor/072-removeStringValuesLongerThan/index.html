@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove String Values Longer Than</title>
+</head>
+<body>
+
+    <h2>Remove String Values Longer Than</h2>
+
+    <h3>Given an number and an object, "removeStringValuesLongerThan" removes any properties on the given object whose values are strings longer than the given number.</h3>
+
+    <p>var obj = {
+            name: 'Montana',
+            age: 20,
+            location: 'Texas'
+          };</p>
+
+    <p>removeStringValuesLongerThan(6, obj);</p>
+
+    <p>console.log(obj); // { age: 20, location: 'Texas' }</p>
+
+
+    <script>
+
+    const obj = {
+        name: 'Montana',
+        age: 20,
+        location: 'Texas'
+    };
+    
+    const removeStringValuesLongerThan = (num, obj) => {
+        for (let key in obj) {
+            if (obj[key].length > num) {
+                delete obj[key];
+            }
+        }
+        return obj;
+    }
+    console.log(removeStringValuesLongerThan(6, obj));
+    
+    </script>
+    
+</body>
+</html>
