@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Either Even And Less Than 9</title>
+</head>
+<body>
+
+    <h2>Is Either Even And Less Than 9</h2>
+
+    <h3>Write a function called "isEitherEvenAndLessThan9".</h3>
+
+    <p>Given two numbers, 'isEitherEvenAndLessThan9' returns whether at least one of them is even, and, both of them are less than 9.</p>
+
+    <p>var output = isEitherEvenAndLessThan9(2, 4);</p>
+
+    <p>console.log(output); // --> true</p>
+
+    <p>var output = isEitherEvenAndLessThan9(72, 2);</p>
+
+    <p>console.log(output); // --> false</p>
+
+
+    <script>
+    
+    const isEitherEvenAndLessThan9 = (num1, num2) => {
+        return (num1 % 2 === 0 || num2 % 2 === 0) && (num1 < 9 && num2 < 9) ? true : false;
+    }
+    console.log(isEitherEvenAndLessThan9(2, 4));
+
+    </script>
+    
+</body>
+</html>
