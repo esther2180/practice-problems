@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove Numbers Larger Than</title>
+</head>
+<body>
+
+    <h2>Remove Numbers Larger Than</h2>
+
+    <h3>Given a number and an object, "removeNumbersLargerThan" removes any properties whose values are numbers greater than the given number.</h3>
+
+    <p>var obj = {
+            a: 8,
+            b: 2,
+            c: 'montana'
+          }</p>
+
+    <p>removeNumbersLargerThan(5, obj);</p>
+
+    <p>console.log(obj); // --> { b: 2, c: 'montana' }</p>
+
+    
+    <script>
+
+    const obj = {
+        a: 8,
+        b: 2,
+        c: 'montana'
+    };
+    
+    const removeNumbersLargerThan = (num, obj) => {
+        for (let key in obj) {
+            if (obj[key] > num) {
+                delete obj[key];
+            }
+        }
+        return obj;
+    }
+    console.log(removeNumbersLargerThan(5, obj));
+    
+    </script>
+      
+    
+</body>
+</html>
