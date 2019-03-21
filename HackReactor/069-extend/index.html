@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Extend</title>
+</head>
+<body>
+
+    <h2>Extend</h2>
+
+    <h3>Given two objects, "extend" adds properties from the 2nd object to the 1st object.</h3>
+
+    <p>* Add any keys that are not in the 1st object.</p>
+
+    <p>* If the 1st object already has a given key, ignore it (do not overwrite the property value).</p>
+
+    <p>* Do not modify the 2nd object at all.</p>
+
+    <p>var obj1 = {
+            a: 1,
+            b: 2
+          };</p>
+
+    <p>var obj2 = {
+            b: 4,
+            c: 3
+          };</p>
+
+    <p>extend(obj1, obj2);</p>
+
+    <p>console.log(obj1); // --> {a: 1, b: 2, c: 3}</p>
+
+    <p>console.log(obj2); // --> {b: 4, c: 3}</p>
+
+
+    <script>
+
+    const obj1 = {
+        a: 1,
+        b: 2
+    };
+
+    const obj2 = {
+        b: 4,
+        c: 3
+    };
+    
+    const extend = (obj1, obj2) => {
+        for (let key in obj2) {
+            if (typeof obj1[key] === 'undefined') {
+                obj1[key] = obj2[key];
+            }
+        }
+    }
+    extend(obj1, obj2);
+
+    console.log(obj1);
+    console.log(obj2);
+    
+    </script>
+
+    
+</body>
+</html>
