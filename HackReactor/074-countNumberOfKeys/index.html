@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count Number Of keys</title>
+</head>
+<body>
+
+    <h2>Count Number Of keys</h2>
+
+    <h3>Given an object, "countNumberOfKeys" returns how many properties the given object has.</h3>
+
+
+    <p>var obj = {
+            a: 1,
+            b: 2,
+            c: 3
+          };</p>
+
+    <p>var output = countNumberOfKeys(obj);</p>
+
+    <p>console.log(output); // --> 3</p>
+
+
+    <script>
+    
+    const obj = {
+        a: 1,
+        b: 2,
+        c: 3
+    };
+
+    const countNumberOfKeys = obj => {
+        return Object.keys(obj).length;
+    }
+    console.log(countNumberOfKeys(obj));
+    
+    </script>
+
+    
+</body>
+</html>
