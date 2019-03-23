@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove Odd Values</title>
+</head>
+<body>
+
+    <h2>Remove Odd Values</h2>
+
+    <h3>Given an object, "removeOddValues" removes any properties whose valuse are odd numbers.</h3>
+
+    <p>var obj = {
+            a: 2,
+            b: 3,
+            c: 4
+          };</p>
+
+    <p>removeOddValues(obj);</p>
+
+    <p>console.log(obj); // --> { a: 2, c: 4 }</p>
+
+    
+    <script>
+    
+    const obj = {
+        a: 2,
+        b: 3,
+        c: 4
+    };
+    
+    const removeOddValues = obj => {
+        for (let key in obj) {
+            if (obj[key] % 2 === 1) {
+                delete obj[key];
+            }
+        }
+        return obj;
+    }
+    console.log(removeOddValues(obj));
+    
+    </script>
+      
+    
+</body>
+</html>
