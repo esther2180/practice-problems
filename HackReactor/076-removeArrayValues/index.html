@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove Array Values</title>
+</head>
+<body>
+
+    <h2>Remove Array Values</h2>
+
+    <h3>Given an object, "removeArrayValues" removes any properties whose values are arrays.</h3>
+
+    <p>var obj = {
+            a: [1, 3, 4],
+            b: 2,
+            c: ['hi', 'there']
+          }</p>
+
+    <p>removeArrayValues(obj);</p>
+
+    <p>console.log(obj); // --> { b: 2 }</p>
+
+    
+    <script>
+
+    const obj = {
+        a: [1, 3, 4],
+        b: 2,
+        c: ['hi', 'there']
+    }
+    
+    const removeArrayValues = obj => {
+        for (let key in obj) {
+            if (Array.isArray(obj[key])) {
+                delete obj[key];
+            }
+        }
+        return obj;
+    }
+    console.log(removeArrayValues(obj));
+    
+    </script>
+
+    
+</body>
+</html>
