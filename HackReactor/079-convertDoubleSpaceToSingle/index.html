@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Double Space To Single</title>
+</head>
+<body>
+
+    <h2>Convert Double Space To Single</h2>
+
+    <h3>Given a string, "convertDoubleSpaceToSingle" returns the passed in string, with all the double spaces converted to single spaces.</h3>
+
+    <p>var output = convertDoubleSpaceToSingle("string  with  double  spaces");</p>
+
+    <p>console.log(output); // --> "string with double spaces"</p>
+
+
+    <script>
+    
+    const convertDoubleSpaceToSingle = str => {
+        return str.split('  ').join(' ');
+    }
+
+    console.log(convertDoubleSpaceToSingle("string  with  double  spaces"));
+    
+    </script>
+    
+</body>
+</html>
+
+
+
+
