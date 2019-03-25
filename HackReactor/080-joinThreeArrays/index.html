@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Join Three Arrays</title>
+</head>
+<body>
+
+    <h2>Join Three Arrays</h2>
+
+    <h3>Given three arrays, "joinThreeArrays" returns an array with the elements of "arr1" in order followed by the elements in "arr2" in order followed by the elements of "arr3" in order.</h3>
+
+    <p>var output = joinThreeArrays([1, 2], [3, 4], [5, 6]);</p>
+
+    <p>console.log(output); // --> [1, 2, 3, 4, 5, 6]</p>
+
+    <script>
+    
+    const joinThreeArrays = (arr1, arr2, arr3) => {
+        return arr1.concat(arr2, arr3);
+    }
+    console.log(joinThreeArrays([1, 2], [3, 4], [5, 6]));
+    
+    </script>
+    
+</body>
+</html>
