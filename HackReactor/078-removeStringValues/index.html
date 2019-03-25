@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove String Values</title>
+</head>
+<body>
+
+    <h2>Remove String Values</h2>
+
+    <h3> Given an object, "removeStringValues" removes any properties on the given object whose values are strings.</h3>
+
+    <p>var obj = {
+            name: 'Sam',
+            age: 20
+          }</p>
+
+    <p>removeStringValues(obj);</p>
+   
+    <p>console.log(obj); // { age: 20 }</p>
+
+
+    <script>
+
+    const obj = {
+        name: 'Sam',
+        age: 20
+    };
+    
+    const removeStringValues = obj => {
+        for (let key in obj) {
+            if (typeof obj[key] === 'string') {
+                delete obj[key];
+            }
+        }
+        return obj;
+    }    
+    console.log(removeStringValues(obj));
+
+    </script>
+    
+</body>
+</html>
