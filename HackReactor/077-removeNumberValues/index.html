@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Remove Number Values</title>
+</head>
+<body>
+
+    <h2>Remove Number Values</h2>
+
+    <h3>Given an object, "removeNumberValues" removes any properties whose valuse are numbers.</h3>
+
+    <p>var obj = {
+            a: 2,
+            b: 'remaining',
+            c: 4
+          };</p>
+
+    <p>removeNumberValues(obj);</p>
+
+    <p>console.log(obj); // --> { b: 'remaining' }</p>
+
+
+    <script>
+
+    const obj = {
+        a: 2,
+        b: 'remaining',
+        c: 4
+    };
+    
+    const removeNumberValues = obj => {
+        for (let key in obj) {
+            if (typeof obj[key] === 'number') {
+                delete obj[key];
+            }
+        }
+        return obj;
+    }
+    console.log(removeNumberValues(obj));
+    
+    </script>
+    
+</body>
+</html>
