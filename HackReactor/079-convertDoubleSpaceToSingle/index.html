@@ -18,8 +18,12 @@
 
     <script>
     
+    // const convertDoubleSpaceToSingle = str => {
+    //     return str.split('  ').join(' ');
+    // }
+
     const convertDoubleSpaceToSingle = str => {
-        return str.split('  ').join(' ');
+        return str.replace(/\s\s/g, ' ');
     }
 
     console.log(convertDoubleSpaceToSingle("string  with  double  spaces"));
