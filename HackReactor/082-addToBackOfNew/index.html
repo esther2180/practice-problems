@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add To Back Of New</title>
+</head>
+<body>
+
+    <h2>Add To Back Of New</h2>
+
+    <h3>Given an array and an element, "addToBackNew" returns a clone of the given array, with the given element added to the end.</h3>
+
+    <p>Important: It should be a NEW array instance, not the original array instance.</p>
+
+    <p>var input = [1, 2];</p>
+
+    <p>var output = addToBackOfNew(input, 3);</p>
+
+    <p>console.log(output); // --> [1, 2, 3];</p>
+
+    <p>console.log(input); --> [1, 2]</p>
+
+
+    <script>
+    
+    const input = [1, 2];
+
+    const addToBackOfNew = (arr, el) => {
+        const newArr = arr.slice();
+
+        newArr.push(el);
+        return newArr;
+    }
+    console.log(addToBackOfNew(input, 3));
+    
+    </script>
+    
+</body>
+</html>
