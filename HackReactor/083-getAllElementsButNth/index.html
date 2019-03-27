@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get All Elements But Nth</title>
+</head>
+<body>
+
+    <h2>Get All Elements But Nth</h2>
+
+    <h3>Given an array and an index, "getAllElementsButNth" returns an array with all the elements but the nth.</h3>
+
+    <p>var output = getAllElementsButNth(['a', 'b', 'c'], 1);</p>
+
+    <p>console.log(output); // --> ['a', 'c']</p>
+
+
+    <script>
+    
+    const getAllElementsButNth = (arr, n) => {
+        arr.splice(n, 1);
+        return arr;
+    }
+    console.log(getAllElementsButNth(['a', 'b', 'c'], 1));
+    
+    </script>
+    
+</body>
+</html>
