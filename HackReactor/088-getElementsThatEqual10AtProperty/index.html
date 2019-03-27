@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Elements That Equal 10 At Property</title>
+</head>
+<body>
+
+    <h2>Get Elements That Equal 10 At Property</h2>
+
+    <h3>Write a function called "getElementsThatEqual10AtProperty". Given an object and a key, "getElementsThatEqual10AtProperty" returns an array containing all the elements of the array located at the given key that are equal to ten.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If the array is empty, it should return an empty array.</p>
+
+    <p>* If the array contains no elements are equal to 10, it should return an empty array.</p>
+
+    <p>* If the property at the given key is not an array, it should return an empty array.</p>
+
+    <p>* If there is no property at the key, it should return an empty array.</p>
+
+    <p>var obj = {
+            key: [1000, 10, 50, 10]
+          };</p>
+
+    <p>const output = getElementsThatEqual10AtProperty(obj, 'key');</p>
+
+    <p>console.log(output); // --> [10, 10]</p>
+
+
+    <script>
+    
+    const obj = {
+        key: [1000, 10, 50, 10]
+    };
+    const output = getElementsThatEqual10AtProperty(obj, 'key');
+
+
+    function getElementsThatEqual10AtProperty(obj, key) {
+        const arr = obj[key];
+        const result = [];
+
+        if (arr !== 10 && Array.isArray(arr)  && arr.length > 0  && arr !== undefined) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === 10) {
+                    result.push(arr[i]);
+                }  
+            }
+        }
+        return result;
+    }  
+    console.log(output);
+
+    </script>
+    
+</body>
+</html>
