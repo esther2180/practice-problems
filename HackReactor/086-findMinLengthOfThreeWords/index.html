@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Min Length Of Three Words</title>
+</head>
+<body>
+
+    <h2>Find Min Length Of Three Words</h2>
+
+    <h3>Given 3 words, "findMinLengthOfThreeWords" returns the length of the shortest word.</h3>
+
+    <p>var output = findMinLengthOfThreeWords('a', 'be', 'see');</p>
+
+    <p>console.log(output); // --> 1</p>
+
+
+    <script>
+    
+    const findMinLengthOfThreeWords = (word1, word2, word3) => {
+        const smallestLength = Math.min(word1.length, word2.length, word3.length);
+        return smallestLength;
+    }
+    console.log(findMinLengthOfThreeWords('a', 'be', 'see'));
+    
+    </script>
+    
+</body>
+</html>
