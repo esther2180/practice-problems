@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select</title>
+</head>
+<body>
+
+    <h2>Select</h2>
+
+    <h3>Given an array and an object, "select" returns a new object whose properties are those in the given object AND whose keys are present in the given array. </h3>
+
+    <p>var arr = ['a', 'c', 'e'];
+            var obj = {
+              a: 1,
+              b: 2,
+              c: 3,
+              d: 4
+            };</p>
+
+    <p>var output = select(arr, obj);</p>
+
+    <p>console.log(output); // --> { a: 1, c: 3 }</p>
+
+
+    <script>
+    
+    var arr = ['a', 'c', 'e'];
+    const obj = {
+        a: 1,
+        b: 2,
+        c: 3,
+        d: 4
+    };
+
+    const output = select(arr, obj);
+
+    function select(arr, obj) {
+        let newObj = {};
+
+        for (let i = 0; i < arr.length; i++) {
+            for (let prop in obj) {
+                if (arr[i] === prop) {
+                    newObj[prop] = obj[prop];
+                }
+            }
+        }
+        return newObj;
+    }
+    console.log(output);  
+
+    </script>
+    
+</body>
+</html>
