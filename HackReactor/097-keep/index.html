@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Keep</title>
+</head>
+<body>
+
+    <h2>Keep</h2>
+
+    <h3>Given an array and a keeper element, "keep" returns an array containing the items that match the given keeper element.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If no elements match, "keep" should return an empty array.</p>
+
+    <p>var output = keep([1, 2, 3, 2, 1], 2)</p>
+
+    <p>console.log(output); --> [2, 2]</p>
+
+
+    <script>
+    
+    const keep = (array, keeper) => {
+        const result = [];
+
+        for (let el in array) {
+            if (array[el] === keeper) {
+                result.push(array[el]);
+            }
+        }
+        return result;
+    }
+
+    const output = keep([1, 2, 3, 2, 1], 2);
+    console.log(output);
+
+    </script>
+
+    
+</body>
+</html>
