@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count All Characters</title>
+</head>
+<body>
+
+    <h2>Count All Characters</h2>
+
+    <h3>Given a string, "countAllCharacters" returns an object where each key is a character in the given string. The value of each key should be how many times each character appeared in the given string.</h3>
+
+    <p> Notes:</p>
+
+    <p>* If given an empty string, countAllCharacters should return an empty object.</p>
+
+    <p>var output = countAllCharacters('banana');</p>
+
+    <p>console.log(output); // --> {b: 1, a: 3, n: 2}</p>
+
+
+    <script>
+    
+    // const countAllCharacters = str => {
+    //     const obj = {};
+
+    //     for (let i = 0; i < str.length; i++) {
+    //         const char = str[i];
+
+    //         if (obj[char] === undefined) {
+    //             obj[char] = 1;
+    //         } else {
+    //             obj[char]++;
+    //         }
+    //     }
+    //     return obj;
+    // }
+    // const output = countAllCharacters('banana');
+    // console.log(output);
+
+    
+    const countAllCharacters = str => {
+        return str.split('').reduce((acc, char) => {
+            acc[char] = (acc[char] || 0) + 1;
+            return acc;
+        }, {});
+        return output;
+    }
+    const output = countAllCharacters('banana');
+    console.log(output);
+    
+    
+    </script>
+
+</body>
+</html>
