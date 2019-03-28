@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Elements Greater Than 10 At Property</title>
+</head>
+<body>
+
+    <h2>Get Elements Greater Than 10 At Property</h2>
+
+    <h3>Given an object and a key, "getElementsGreaterThan10AtProperty" returns an array containing the elements within the array, located at the given key, that are greater than 10.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If the array is empty, it should return an empty array.</p>
+
+    <p>* If the array contains no elements greater than 10, it should return an empty array.</p>
+    
+    <p>* If the property at the given key is not an array, it should return an empty array.</p>
+
+    <p>* If there is no property at the key, it should return an empty array. </p>
+
+    <p>var obj = {
+        key: [1, 20, 30]
+    };</p>
+
+    <p>var output = getElementsGreaterThan10AtProperty(obj, 'key');</p>
+
+    <p>console.log(output); // --> [20, 30]</p>
+
+    
+    <script>
+    
+    const obj = {
+        key: [1, 20, 30]
+    };
+
+    const getElementsGreaterThan10AtProperty = (obj, key) => {
+        const arr = obj[key];
+        const result = [];
+
+        if (Array.isArray(arr) && arr !== undefined) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > 10) {
+                    result.push(arr[i]);
+                }
+            }
+        }
+        return result;
+    }
+    const output = getElementsGreaterThan10AtProperty(obj, 'key');
+    console.log(output);
+
+
+    </script>
+
+</body>
+</html>
