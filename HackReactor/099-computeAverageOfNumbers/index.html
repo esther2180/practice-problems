@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compute Average Of Numbers</title>
+</head>
+<body>
+
+    <h2>Compute Average Of Numbers</h2>
+
+    <h3>Given an array of numbers, "computeAverageOfNumbers" returns their average.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If given an empty array, it should return 0.</p>
+
+    <p>var input = [1,2,3,4,5];</p>
+
+    <p>var output = computeAverageOfNumbers(input);</p>
+
+    <p>console.log(output); // --> 3</p>
+
+
+    <script>
+    
+    const input = [1, 2, 3, 4, 5];
+
+    const computeAverageOfNumbers = nums => {
+        let sum = 0;
+        let total = 0;
+
+        for (let i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            total = sum / nums.length;
+        }
+        return total;
+    }
+    
+    const output = computeAverageOfNumbers(input);
+    console.log(output);
+
+
+    </script>
+    
+</body>
+</html>
