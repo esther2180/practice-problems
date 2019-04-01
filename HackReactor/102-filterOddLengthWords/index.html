@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter Odd Length Words</title>
+</head>
+<body>
+
+    <h2>Filter Odd Length Words</h2>
+
+    <h3>Given an array of string, "filterOddLengthWords" returns an array containing only the elements of the given array whose lengths are odd numbers.</h3>
+
+    <p>var output = filterOddLengthWords(['there', 'it', 'is', 'now']);</p>
+
+    <p>console.log(output); // --> ['there', "now']</p>
+
+    <script>
+    
+    const filterOddLengthWords = words => {
+        let result = [];
+
+        for (let word in words) {
+            if (words[word].length % 2 === 1) {
+                result.push(words[word]);
+            }
+        }
+        return result;
+    }
+
+    const output = filterOddLengthWords(['there', 'it', 'is', 'now']);
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
