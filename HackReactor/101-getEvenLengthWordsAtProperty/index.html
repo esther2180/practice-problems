@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Write a function called "getEvenLengthWordsAtProperty".</h2>
+
+    <h3>Given an object and a key, "getEvenLengthWordsAtProperty" returns an array containing all the even length word elements of the array located at the given key.</h3>
+
+    <p> Notes:</p>
+
+    <p>* If the array is empty, it should return an empty array.</p>
+
+    <p>* If it contains no even length elements, it should return an empty array.</p>
+
+    <p>* If the property at the given key is not an array, it should return an empty array.</p>
+
+    <p>* If there is no property at the key, it should return an empty array.</p>
+
+    <p>var obj = {
+        key: ['a', 'long', 'game']
+    };</p>
+
+    <p>var output = getEvenLengthWordsAtProperty(obj, 'key');</p>
+
+    <p>console.log(output); // --> ['long', 'game']</p>
+
+
+    <script>
+    
+    const obj = {
+        key: ['a', 'long', 'game']
+    };
+
+    const getEvenLengthWordsAtProperty = (obj, key) => {
+        const arr = obj[key];
+        let result = [];
+
+        if (Array.isArray(arr)) {
+
+            for (let el in arr) {
+                if (arr[el].length % 2 === 0) {
+                    result.push(arr[el]);
+                }
+            }
+        }
+        return result;
+    }
+
+    const output = getEvenLengthWordsAtProperty(obj, 'key');
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
