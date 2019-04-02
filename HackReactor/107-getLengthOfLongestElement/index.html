@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Length Of Longest Element</title>
+</head>
+<body>
+
+    <h2>Get Length Of Longest Element</h2>
+
+    <h3>Given an array, "getLengthOfLongestElement" returns the length of the longest string in the given array.</h3>
+
+    <p>Notes:</p>
+
+    <p>* It should return 0 if the array is empty.</p>
+
+    <p>var output = getLengthOfLongestElement(['one', 'two', 'three']);</p>
+
+    <p>console.log(output); // --> 5</p>
+
+
+    <script>
+    
+    const getLengthOfLongestElement = arr => {
+        let longest = 0;
+
+        for (let el in arr) {
+            if (arr[el].length > longest) {
+                longest = arr[el].length;
+            }
+        }
+        return longest;
+    }
+    const output = getLengthOfLongestElement(['one', 'two', 'three'])
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
