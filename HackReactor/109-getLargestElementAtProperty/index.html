@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Largest Element At Property</title>
+</head>
+<body>
+
+    <h2>Get Largest Element At Property</h2>
+
+    <h3>Given an object and a key, "getLargestElementAtProperty" returns the largest element in the array located at the given key.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If the array is empty, it should return undefined.</p>
+
+    <p>* If the property at the given key is not an array, it should return undefined.</p>
+
+    <p>* If there is no property at the key, it should return undefined.</p>
+
+    <p>var obj = {
+        key: [1, 2, 4]
+    };</p>
+
+    <p>var output = getLargestElementAtProperty(obj, 'key');</p>
+
+    <p>console.log(output); // --> 4</p>
+
+
+    <script>
+    
+    const obj = {
+        key: [1, 2, 4]
+    };
+
+    const getLargestElementAtProperty = (obj, key) => {
+        const arr = obj[key];
+        let max;
+
+        if(Array.isArray(arr)) {
+            for (let el in arr) {
+                max = Math.max(...arr);
+            }
+        }
+        return max;
+    }
+
+    const output = getLargestElementAtProperty(obj, 'key');
+    console.log(output);
+    
+    </script>
+
+    
+</body>
+</html>
