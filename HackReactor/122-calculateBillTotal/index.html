@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate Bill Total</title>
+</head>
+<body>
+
+    <h2>Calculate Bill Total</h2>
+
+    <h3>Given the pre tax and pre tip amount of a meal, "calculateBillTotal" returns the total amount due after tax and tip.</h3>
+
+    <p>Notes:</p>
+
+    <p>* Assume that sales tax is 9.5% and tip is 15%.</p>
+
+    <p>* Do NOT tip on the sales tax, only on the pre tip amount.</p>
+
+    <p>var output = calculateBillTotal(20);</p>
+
+    <p>console.log(output); // --> 24.9</p>
+
+
+    <script>
+    
+    const calculateBillTotal = preTaxAndTipAmount => {
+        let tax = preTaxAndTipAmount * 0.095;
+        let tip = preTaxAndTipAmount * 0.15;
+        let total = preTaxAndTipAmount + tax + tip;
+        return total;
+    }
+    console.log(calculateBillTotal(20));
+    
+    </script>
+    
+</body>
+</html>
