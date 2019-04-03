@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter Even Elements</title>
+</head>
+<body>
+
+    <h2>Filter Even Elements</h2>
+
+    <h3>Given an array of numbers, "filterEvenElements" returns an array containing only the even numbers of the given array.</h3>
+
+    <p>var output = filterEvenElements([2, 3, 4, 5, 6]);</p>
+    
+    <p>console.log(output); // --> [2, 4, 6]</p>
+
+
+    <script>
+    
+    const filterEvenElements = arr => {
+        let result = [];
+
+        for (let el in arr) {
+            if (arr[el] % 2 === 0) {
+                result.push(arr[el]);
+            }
+        }
+        return result;
+    }
+
+    const output = filterEvenElements([2, 3, 4, 5, 6]);
+    console.log(output);
+    
+    </script>
+
+</body>
+</html>
