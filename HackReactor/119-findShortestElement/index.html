@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Shortest Element</title>
+</head>
+<body>
+    
+    <h2>Find Shortest Element</h2>
+
+    <h3>Given an array, "findShortestElement" returns the shortest string within the given array.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If there are ties, it should return the first element to appear.</p>
+
+    <p>* If the given array is empty, it should return an empty string.</p>
+    
+    <p>var output = findShortestElement(['a', 'two', 'three']);</p>
+    
+    <p>console.log(output); // --> 'a'</p>
+
+
+    <script>
+    
+    const findShortestElement = arr => {
+        let shortest = '';
+
+        if (arr.length > 0) {
+            shortest = arr[0];
+
+            for (let el in arr) {
+                if (arr[el].length < shortest.length) {
+                    shortest = arr[el];
+                }
+            }
+        }
+        return shortest;
+    }
+
+    const output = findShortestElement(['a', 'two', 'three']);
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
