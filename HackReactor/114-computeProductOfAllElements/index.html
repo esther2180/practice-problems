@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compute Product Of All Elements</title>
+</head>
+<body>
+
+    <h2>Compute Product Of All Elements</h2>
+
+    <h3>Given an array of numbers, "computeProductOfAllElements" returns the products of all the elements in the given array.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If given array is empty, it should return 0.</p>
+
+    <p>var output = computeProductOfAllElements([2, 5, 6]);</p>
+
+    <p>console.log(output); // --> 60</p>
+
+
+    <script>
+    
+    const computeProductOfAllElements = arr => {
+        let result = 0;
+
+        if (arr.length > 0) {
+            result = arr.reduce((a, b) => a * b);
+        } else {
+            return 0;
+        }
+        return result;
+    }
+
+    const output = computeProductOfAllElements([2, 5, 6]);
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
