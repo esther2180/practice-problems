@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Smallest Element</title>
+</head>
+<body>
+
+    <h2>Find Smallest Element</h2>
+
+    <h3>Given an array of numbers, "findSmallestElement" returns the smallest number within the given array.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If the given array is empty, it should return 0.</p>
+
+    <p>var output = findSmallestElement([4, 1, 9, 10]);</p>
+
+    <p>console.log(output); // --> 1</p>
+
+
+    <script>
+    
+    const findSmallestElement = arr => {
+        let smallest = 0;
+
+        if (arr.length > 0) {
+            smallest = arr[0];
+
+            for (let el in arr) {
+                if (arr[el] < smallest) {
+                    smallest = arr[el];
+                }
+            }
+        }
+        return smallest;
+    }
+
+    const output = findSmallestElement([4, 1, 9, 10]);
+    console.log(output);
+
+    </script>
+
+</body>
+</html>
