@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get String Length</title>
+</head>
+<body>
+
+    <h2>Get String Length</h2>
+
+    <h3>Given a string, "getStringLength" returns the length of the given string.</h3>
+
+    <p>Notes:</p>
+
+    <p>* Do NOT use any native 'length' methods.</p>
+
+    <p>* You might consider using 'substring' or 'slice' as alternatives.</p>
+
+    <p>var output = getStringLength('hello');</p>
+
+    <p>console.log(output); // --> 5</p>
+
+
+    <script>
+    
+    const getStringLength = string => {
+        let count = 0;
+
+        while (string) {
+            string = string.slice(1);
+            count++;
+        }
+        return count;
+    }
+    console.log(getStringLength('hello'));
+    
+    </script>
+
+    
+</body>
+</html>
