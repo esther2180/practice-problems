@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Largest Element</title>
+</head>
+<body>
+
+    <h2>Get Largest Elemen</h2>
+
+    <h3>Given an array, "getLargestElement" returns the largest number in the given array.</h3>
+
+    <p>Notes:</p>
+
+    <p>* It should return 0 if the array is empty.</p>
+
+    <p>var output = getLargestElement([5, 2, 8, 3]);</p>
+
+    <p>console.log(output); // --> 8;</p>
+
+
+    <script>
+    
+    const getLargestElement = arr => {
+        let largest = 0;
+
+        if (arr.length > 0) {
+            largest = arr[0];
+
+            for (let el in arr) {
+                if (arr[el] > largest) {
+                    largest = arr[el];
+                }
+            }
+        }
+        return largest;
+    }
+
+    const output = getLargestElement([5, 2, 8, 3]);
+    console.log(output);
+    
+    
+    </script>
+    
+</body>
+</html>
