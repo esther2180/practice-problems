@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Square Elements</title>
+</head>
+<body>
+
+    <h2>Square Elements</h2>
+
+    <h3>Given a array of numbers, "squareElements" should return a new array where each element is the square of the element of the given array.</h3>
+
+    <p>var output = squareElements([1, 2, 3]);</p>
+
+    <p>console.log(output); // --> [1, 4, 9]</p>
+
+
+    <script>
+    
+    const squareElements = arr => {
+        let result = [];
+
+        for (let el in arr) {
+            result.push(arr[el] * arr[el]);
+        }
+        return result;
+    }
+
+    const output = squareElements([1, 2, 3]);
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
