@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Longest Element</title>
+</head>
+<body>
+
+    <h2>Get Longest Element</h2>
+
+    <h3>Given an array, "getLongestElement" returns the longest string in the given array.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If there are ties, it returns the first element to appear.</p>
+
+    <p>* If the array is empty, tt should return an empty string.</p>
+
+    <p>var output = getLongestElement(['one', 'two', 'three']);</p>
+
+    <p>console.log(output); // --> 'three'</p>
+
+
+    <script>
+    
+    const getLongestElement = arr => {
+        let longest = '';
+
+        if (arr.length > 0) {
+            for (let el in arr) {
+                if (arr[el].length > longest.length) {
+                    longest = arr[el];
+                }
+            }
+        }
+        return longest;
+    }
+
+    const output = getLongestElement(['one', 'two', 'three']);
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
