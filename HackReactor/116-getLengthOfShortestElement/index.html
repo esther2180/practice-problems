@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Length Of Shortest Element</title>
+</head>
+<body>
+
+    <h2>Get Length Of Shortest Element</h2>
+
+    <h3>Given an array, "getLengthOfShortestElement" returns the length of the shortest string in the given array.</h3>
+
+    <p>Notes:</p>
+
+    <p>* It should return 0 if the array is empty.</p>
+
+    <p>var output = getLengthOfShortestElement(['one', 'two', 'three']);</p>
+
+    <p>console.log(output); // --> 3</p>
+
+
+    <script>
+    
+    const getLengthOfShortestElement = arr => {
+        let shortest = 0;
+
+        if (arr.length > 0) {
+            shortest = arr[0].length;
+
+            for (let el in arr) {
+                if (arr[el].length < shortest) {
+                    shortest = arr[el].length;
+                }
+            }
+        }
+        return shortest;
+    }
+
+    const output = getLengthOfShortestElement(['one', 'two', 'three']);
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
