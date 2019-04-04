@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Product Of All Elements At Property</title>
+</head>
+<body>
+
+    <h2>Get Product Of All Elements At Property</h2>
+
+    <h3>Given an object and a key, "getProductOfAllElementsAtProperty" returns the product of all the elements in the array located at the given key.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If the array is empty, it should return 0.</p>
+    
+    <p>* If the property at the given key is not an array, it should return 0.</p>
+
+    <p>* If there is no property at the given key, it should return 0.</p>
+
+    <p>var obj = {
+        key: [1, 2, 3, 4]
+    };</p>
+
+    <p>var output = getProductOfAllElementsAtProperty(obj, 'key');</p>
+
+    <p>console.log(output); // --> 24</p>
+
+
+    <script>
+
+    const obj = {
+        key: [1, 2, 3, 4]
+    }
+    
+    const getProductOfAllElementsAtProperty = (obj, key) => {
+        const arr = obj[key];
+
+        if (Array.isArray(arr) && arr.length > 0) {
+            return arr.reduce((a, b) => a * b)
+        } else {
+            return 0;
+        } 
+    }
+
+    const output = getProductOfAllElementsAtProperty(obj, 'key');
+    console.log(output);
+    
+    </script>
+
+    
+</body>
+</html>
