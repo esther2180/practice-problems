@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Shortest Word Among Mixed Elements</title>
+
+</head>
+<body>
+
+    <h1>Find Shortest Word Among Mixed Elements</h1>
+
+    <h3>Given an array, "findShortestWordAmongMixedElements" returns the shortest string within the given array.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If there are ties, it should return the first element to appear in the given array.</p>
+
+    <p>* Expect the given array to have values other than strings.</p>
+
+    <p>* If the given array is empty, it should return an empty string.</p>
+
+    <p>* If the given array contains no strings, it should return an empty string.</p>
+
+    <p>var output = findShortestWordAmongMixedElements([4, 'two', 2, 'three']);</p>
+
+    <p>console.log(output); // --> 'two'</p>
+
+
+    <script>
+    
+    const findShortestWordAmongMixedElements = arr => {
+        let shortest = '';
+
+        for (let el of arr) {
+            if (typeof el === 'string' && (shortest === '' || el.length < shortest.length)) {
+                shortest = el;
+            }
+        }
+        return shortest;
+    }
+
+    const output = findShortestWordAmongMixedElements([4, 'two', 2, 'three'])
+    console.log(output);
+    
+    </script>
+
+    
+</body>
+</html>
