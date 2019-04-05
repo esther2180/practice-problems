@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Sum Of All Elements At Property</title>
+</head>
+<body>
+
+    <h2>Get Sum Of All Elements At Property</h2>
+
+    <h3>Given an object and a key, "getSumOfAllElementsAtProperty" returns the sum of all the elements in the array located at the given key.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If the array is empty, it should return 0.</p>
+
+    <p>* If the property at the given key is not an array, it should return 0.</p>
+
+    <p>* If there is no property at the key, it should return 0.</p>
+
+    <p>var obj = {
+        key: [4, 1, 8]
+    };</p>
+
+    <p>var output = getSumOfAllElementsAtProperty(obj, 'key');</p>
+
+    <p>console.log(output); // --> 13</p>
+
+
+    <script>
+    
+    const obj = {
+        key: [4, 1, 8]
+    };
+
+    const getSumOfAllElementsAtProperty = (obj, key) => {
+        const arr = obj[key];
+        let total = 0;
+
+        if (Array.isArray(arr) && arr.length > 0) {
+            for (let el in arr) {
+                total += arr[el];
+            }
+        }
+        return total;
+    }
+    const output = getSumOfAllElementsAtProperty(obj, 'key');
+    console.log(output);
+
+    </script>
+
+    
+</body>
+</html>
