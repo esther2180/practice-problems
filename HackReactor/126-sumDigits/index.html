@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sum Digits</title>
+</head>
+<body>
+
+    <h2>Sum Digits</h2>
+
+    <h3>Given a number, "sumDigits" returns the sum of all its digits.</h3>
+
+    <p>var output = sumDigits(1148);</p>
+
+    <p>console.log(output); // --> 14</p>
+
+    <p>If the number is negative, the first digit should count as negative.</p>
+
+    <p>var output = sumDigits(-316);</p>
+
+    <p>console.log(output); // --> 4</p>
+
+    <p>Notes:</p>
+
+    <p>* In order to use some of the methods that will be most helpful to you, you will most likely want to do some string to number conversion and vice versa.</p>
+
+    <p>* Be sure to familiarize yourself with the "toString" method, as well as the "Number" function.</p>
+
+
+    <script>
+    
+    const sumDigits = num => {
+        let strNum = num.toString();
+        strNum = strNum.substr(strNum.indexOf('-') + 1).split('');
+
+        let total = (num < 0) ? -strNum[0] : +strNum[0];
+
+        for (let i = 1; i < strNum.length; i++) {
+            total += parseInt(strNum[i]);
+        }
+        return total;
+    }
+
+    console.log(sumDigits(-316));
+    console.log(sumDigits(1148));
+    
+    </script>
+
+    
+</body>
+</html>
