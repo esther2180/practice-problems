@@ -24,25 +24,41 @@
 
     <script>
     
+    // const getLongestWordOfMixedElements = arr => {
+    //     let longest = '';
+
+    //     if (arr.length < 0) {
+    //         return longest;
+    //     }
+
+    //     for (let el in arr) {
+    //         if (typeof arr[el] === 'string') {
+
+    //             if (longest === '') {
+    //                 longest = arr[el];
+    //             } else if (arr[el].length > longest.length) {
+    //                 longest = arr[el];
+    //             }
+    //         }
+    //     }
+    //     return longest;
+    // }
+
+
     const getLongestWordOfMixedElements = arr => {
+        let strArray = arr.filter(el => typeof el === 'string');
+
         let longest = '';
 
-        if (arr.length < 0) {
-            return longest;
-        }
-
-        for (let el in arr) {
-            if (typeof arr[el] === 'string') {
-
-                if (longest === '') {
-                    longest = arr[el];
-                } else if (arr[el].length > longest.length) {
-                    longest = arr[el];
-                }
+        for (let el in strArray) {
+            if (strArray[el].length > longest.length) {
+                longest = strArray[el];
             }
         }
         return longest;
     }
+
+
     const output = getLongestWordOfMixedElements([3, 'word', 5, 'up', 3, 1]);
     console.log(output);
     
