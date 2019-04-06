@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Smallest Number Among Mixed Elements</title>
+</head>
+<body>
+
+    <h2>Find Smallest Number Among Mixed Elements</h2>
+
+    <h3>Given an array of mixed elements, "findSmallestNumberAmongMixedElements" returns the smallest number within the given array.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If the given array is empty, it should return 0.</p>
+
+    <p>* If the array contains no numbers, it should return 0.</p>
+
+    <p>var output = findSmallestNumberAmongMixedElements([4, 'lincoln', 9, 'octopus']);</p>
+
+    <p>console.log(output); // --> 4</p>
+
+
+    <script>
+    
+    const findSmallestNumberAmongMixedElements = arr => {
+        let numArray = arr.filter(el => typeof el === 'number');
+
+        if(numArray.length < 0) {
+            return 0;
+        }
+
+        let smallest = numArray.reduce((a, b) => Math.min(a, b), numArray[0]);
+        return smallest;
+    }
+    const output = findSmallestNumberAmongMixedElements([4, 'lincoln', 9, 'octopus']);
+    console.log(output);
+
+    </script>
+    
+</body>
+</html>
