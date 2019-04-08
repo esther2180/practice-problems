@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compute Summation To N</title>
+</head>
+<body>
+
+    <h2>Compute Summation To N</h2>
+
+    <h3>Given a number, "computeSummationToN" returns the sum of sequential numbers leading up to the given number, beginning at 0.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If n = 4, it should calculate the sum of 1 + 2 + 3 + 4, and return 10.</p>
+
+    <p>var output = computeSummationToN(6);</p>
+
+    <p>console.log(output); // --> 21</p>
+
+
+    <script>
+    
+    const computeSummationToN = n => {
+        let total = 0;
+
+        for (let i = 0; i <= n; i++) {
+            total += i;
+        }
+        return total;
+    };
+
+    const output = computeSummationToN(6);
+    console.log(output);
+    
+    </script>
+
+</body>
+</html>
