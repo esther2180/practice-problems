@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Score To Grade</title>
+</head>
+<body>
+
+    <h2>Convert Score To Grade<</h2>
+
+    <h3>Given a score, "convertScoreToGrade" returns a string representing the letter grade corresponding to the given score.</h3>
+
+    <p>Notes:</p>
+
+    <p>* (100 - 90) --> 'A'</p>
+
+    <p>* (89  - 80) --> 'B'</p>
+
+    <p>* (79  - 70) --> 'C'</p>
+
+    <p>* (69  - 60) --> 'D'</p>
+
+    <p>* (59  -  0) --> 'F'</p>
+
+    <p>* If the given score is greater than 100 or less than 0, it should return 'INVALID SCORE'.</p>
+
+    <p>var output = convertScoreToGrade(91);</p>
+
+    <p>console.log(output); // --> 'A'</p>
+
+    
+    <script>
+    
+    const convertScoreToGrade = score => {
+        if (score > 100 || score < 0) return "INVALIDE SCORE";
+        if (score >= 90 && score <= 99) return "A";
+        if (score >= 80 && score <= 89) return "B";
+        if (score >= 70 && score <= 79) return "C";
+        if (score >= 60 && score <= 69) return "D";
+        else return "F";
+    }
+    const output = convertScoreToGrade(91);
+    console.log(output);
+    
+    </script>
+
+</body>
+</html>
