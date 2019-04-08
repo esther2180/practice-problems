@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Largest Number Among Mixed Elements</title>
+</head>
+<body>
+
+    <h2>Get Largest Number Among Mixed Elements</h2>
+
+    <h3>Given any array, "getLargestNumberAmongMixedElements" returns the largest number in the given array.</h3>
+
+    <p>Notes:</p>
+
+    <p>* The array might contain values of a type other than numbers.</p>
+
+    <p>* If the array is empty, it should return 0.</p>
+
+    <p>* If the array contains no numbers, it should return 0.</p>
+
+    <p>var output = getLargestNumberAmongMixedElements([3, 'word', 5, 'up', 3, 1]);</p>
+
+    <p>console.log(output); // --> 5</p>
+
+
+    <script>
+    
+    const getLargestNumberAmongMixedElements = arr => {
+        let numArray = arr.filter(el => typeof el === 'number');
+
+        if (!numArray.length) {
+            return 0;
+        }
+
+        let largest = numArray.reduce((a, b) => Math.max(a, b), numArray[0]);
+        return largest;
+    }
+
+    const output = getLargestNumberAmongMixedElements([3, 'word', 5, 'up', 3, 1]);
+    console.log(output);
+
+    </script>
+    
+</body>
+</html>
