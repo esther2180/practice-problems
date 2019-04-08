@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compute Factorial Of N</title>
+</head>
+<body>
+
+    <h2>Compute Factorial Of N</h2>
+
+    <h3>Given a natural number (a whole number greater than 0), "computeFactorialOfN" returns its factorial.</h3>
+
+    <p>var output = computeFactorialOfN(3);</p>
+
+    <p>console.log(output); // --> 6</p>
+
+    <p>var output = computeFactorialOfN(4);</p>
+
+    <p>console.log(output); // --> 24</p>
+
+
+    <script>
+    
+    const computeFactorialOfN = n => {
+        if (n <= 1) {
+            return 1;
+        }
+
+        for (let i = n - 1; i >= 1; i--) {
+            n *= i;
+        }
+        return n;
+    }
+
+    const output = computeFactorialOfN(4);
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
