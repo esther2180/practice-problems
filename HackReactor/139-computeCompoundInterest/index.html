@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Compute Compound Interest</title>
+</head>
+<body>
+
+    <h2>Compute Compound Interest</h2>
+
+    <h3>Given a principal, an interest rate, a compounding frequency, and a time (in years), "computeCompoundInterest" returns the amount of compound interest generated.</h3>
+
+    <p>var output = computeCompoundInterest(1500, .043, 4, 6);</p>
+
+    <p>console.log(output); // --> 438.8368221341061</p>
+
+    <p>Reference:</p>
+
+    <p>https://en.wikipedia.org/wiki/Compound_interest#Calculation_of_compound_interest</p>
+
+    <p>This shows the formula used to calculate the total compound interest generated.</p>
+
+
+    <script>
+    
+    const computeCompoundInterest = (principal, interestRate, compoundingFrequency, timeInYear) => {
+        let interest = 0;
+
+        interest = principal * Math.pow((1 + interestRate/compoundingFrequency), (compoundingFrequency * timeInYear)) - principal;
+
+        return interest;
+    }
+
+    const output = computeCompoundInterest(1500, .043, 4, 6);
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
