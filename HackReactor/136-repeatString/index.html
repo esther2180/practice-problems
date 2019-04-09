@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Repeat String</title>
+</head>
+<body>
+
+    <h2>Repeat String</h2>
+
+    <h3>Given a string and a number, "repeatString" returns the given string repeated the given number of times.</h3>
+
+    <p>var output = repeatString('code', 3);</p>
+
+    <p>console.log(output); // --> 'codecodecode'</p>
+
+
+    <script>
+    
+    const repeatString = (string, num) => {
+        let result = '';
+
+        for (let i = 0; i < num; i++) {
+            result += string;
+        }
+        return result;
+    }
+
+    const output = repeatString('code', 3);
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
