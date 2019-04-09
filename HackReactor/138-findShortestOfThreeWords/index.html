@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Shortest Of Three Words</title>
+</head>
+<body>
+
+    <h2>Find Shortest Of Three Words</h2>
+
+    <h3>Given 3 strings, "findShortestOfOfThreeWords" returns the shortest of the given strings.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If there are ties, it should return the first word in the parameters list.</p>
+
+    <p>var output = findShortestOfOfThreeWords('a', 'two', 'three');</p>
+
+    <p>console.log(output); // --> 'a'</p>
+
+
+    <script>
+    
+    function findShortestOfOfThreeWords(word1, word2, word3) {
+        let shortest = word1;
+
+        for (let i = 0; i < arguments.length; i++) {
+            if (shortest.length > arguments[i].length) {
+                shortest = arguments[i];
+            }
+        }
+        return shortest;
+    }
+
+    const output = findShortestOfOfThreeWords('a', 'two', 'three');
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
