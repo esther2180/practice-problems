@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get Longest Of Three Words</title>
+</head>
+<body>
+
+    <h2>Get Longest Of Three Words</h2>
+
+    <h3>Given 3 words, "getLongestOfThreeWords" returns the longest of three words.</h3>
+
+    <p>Notes:</p>
+
+    <p>* If there is a tie, it should return the first word in the tie.</p>
+
+    <p>var output = getLongestOfThreeWords('these', 'three', 'words');</p>
+
+    <p>console.log(output); // --> 'these'</p>
+
+
+    <script>
+    
+    function getLongestOfThreeWords(word1, word2, word3) {
+        let longest = word1;
+
+        for (let i = 0; i < arguments.length; i++) {
+            if (longest.length < arguments[i].length) {
+                longest = arguments[i];
+            }
+        }
+        return longest;
+    }
+    
+    const output = getLongestOfThreeWords('these', 'three', 'words');
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
