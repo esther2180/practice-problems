@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiply Between</title>
+</head>
+<body>
+
+    <h2>Multiply Between</h2>
+
+    <h3>Given 2 integers, "multiplyBetween" returns the product between the two given integers, beginning at num1, and excluding num2.</h3>
+
+    <p>Notes:</p>
+
+    <p>* The product between 1 and 4 is 1 * 2 * 3 = 6.</p>
+
+    <p>* If num2 is not greater than num1, it should return 0.</p>
+
+    <p>var output = multiplyBetween(2, 5);</p>
+
+    <p>console.log(output); // --> 24</p>
+
+
+    <script>
+    
+    const multiplyBetween = (num1, num2) => {
+        let result = 1;
+
+        if (num2 <= num1) {
+            return 0;
+        }
+
+        for (let i = num1; i < num2; i++) {
+            result *= i;
+        }
+        return result;
+    }
+    const output = multiplyBetween(2, 5);
+    console.log(output);
+    
+    
+    </script>
+
+    
+</body>
+</html>
