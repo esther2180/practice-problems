@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modulo</title>
+</head>
+<body>
+
+    <h2>Modulo</h2>
+
+    <h3>Given 2 numbers, "modulo" returns the remainder after dividing num1 by num2.</h3>
+
+    <p>It should behave as described in the canonical documentation (MDN) for the JavaScript remainder operator:</p>
+
+    <p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()</p>
+    
+    <p>Notes:</p>
+
+    <p>* Do NOT use the actual built-in modulo (aka "remainder") operator (%) in your implementation.</p>
+
+    <p>* 0 % ANYNUMBER = 0.</p>
+
+    <p>* ANYNUMBER % 0 = NaN.</p>
+
+    <p>* If either operand is NaN, then the result is NaN.</p>
+
+    <p>* Modulo always returns the sign of the first number.</p>
+
+    <p>var output = modulo(25, 4);</p>
+
+    <p>console.log(output); // --> 1</p>
+
+
+
+    <script>
+    
+    const modulo = (num1, num2) => {
+
+        if (isNaN(num1, num2) || num2 === 0) {
+            return NaN;
+        }
+
+        let remainder = num1 - (Math.floor(num1 / num2)) * num2;
+
+        if ((num1 < 0) || (num2 < 0)) {
+            remainder = num1 - (Math.ceil(num1 / num2)) * num2;
+        }
+
+        return remainder;
+    }
+
+    const output = modulo(25, 4);
+    console.log(output);
+    
+    </script>
+
+
+    
+</body>
+</html>
