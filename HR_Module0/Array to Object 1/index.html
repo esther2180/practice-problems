@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Array To Object</title>
+</head>
+<body>
+
+    <h2>Convert Array To Object</h2>
+
+    <h3>Write a function 'transformFirstAndLast' that takes in an array, and returns an object with:</h3>
+
+    <p>1) the first element of the array as the object's key, and</p>
+
+    <p>2) the last element of the array as that key's value.</p>
+
+    <p>Example input:</p>
+
+    <p>['Queen', 'Elizabeth', 'Of Hearts', 'Beyonce']</p>
+
+    <p>Function's return value (output):</p>
+
+    <p>{ Queen : 'Beyonce' }</p>
+
+    <p>['Kevin', 'Bacon', 'Love', 'Hart', 'Costner', 'Spacey']</p>
+
+    <p>{ Kevin : 'Spacey' }</p>
+
+
+    <script>
+
+    const transformFirstAndLast = array => {
+        let resultObj = {};
+        let key = array[0];
+
+        resultObj[key] = array[array.length - 1];
+
+        return resultObj;
+    }
+    console.log(transformFirstAndLast(['Queen', 'Elizabeth', 'Of Hearts', 'Beyonce']));
+    console.log(transformFirstAndLast(['Kevin', 'Bacon', 'Love', 'Hart', 'Costner', 'Spacey']));
+    
+    </script>
+
+    
+</body>
+</html>
