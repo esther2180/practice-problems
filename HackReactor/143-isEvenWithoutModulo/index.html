@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is Even Without Modulo</title>
+</head>
+<body>
+
+    <h2>Is Even Without Modulo</h2>
+
+    <h3>Given a number, "isEvenWithoutModulo" returns whether the passed in number is even.</h3>
+
+    <p>Note:</p>
+
+    <p>* It does so without using the modulo operator (%).</p>
+
+    <p>* It should work for negative numbers and zero.</p>
+ 
+    <p>var output = isEvenWithoutModulo(8);</p>
+
+    <p>console.log(output); // --> true</p>
+
+
+    <script>
+    
+    const isEveWithoutModulo = num => {
+        return Number.isInteger(num / 2);
+    }
+    const output = isEveWithoutModulo(8);
+    console.log(output);
+    
+    </script>
+
+    
+</body>
+</html>
