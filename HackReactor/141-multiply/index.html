@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiply</title>
+</head>
+<body>
+
+    <h2>Multiply</h2>
+
+    <h3>Given 2 numbers, "multiply" returns their product.</h3>
+
+    <p>Notes:</p>
+
+    <p>* It should not use the multiply operator (*).\</p>
+
+    <p>var output = multiply(4, 7);</p>
+
+    <p>console.log(output); // --> 28</p>
+
+
+    <script>
+    
+    const multiply = (num1, num2) => {
+        let sum = 0;
+
+        for (let i = 0; i < Math.abs(num2); i++) {
+            sum += Math.abs(num1);
+        }
+        if (num1 < 0 || num2 < 0) {
+            sum = -sum;
+        }
+        return sum;
+    }
+    const output = multiply(4, 7);
+    console.log(output);
+    
+    
+    </script>
+
+    
+</body>
+</html>
