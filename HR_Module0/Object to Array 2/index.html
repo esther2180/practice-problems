@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Object To Array 2</title>
+</head>
+<body>
+
+    <h2>Convert Object To Array 2</h2>
+
+    <h3>Write a function called "listAllValues" which returns an array of all the input object's values.</h3>
+
+    <p>Example input:</p>
+
+    <p>{ name : 'Krysten', age : 33, hasPets : false }</p>
+
+    <p>Function's return value (output):</p>
+
+    <p>['Krysten', 33, false]</p>
+
+    <p>Note that the input may have a different number of keys and values than the given sample.</p>
+
+    <p>E.g. it should also handle an input like:</p>
+
+    <p>{ a : 'a', number : 11, hungry : true, grammyWins : 1 }</p>
+
+    <p>Function's return value (output):</p>
+
+    <p>['a', 11, true, 1]</p>
+
+
+    <script>
+    
+    // const obj = {
+    //     name: 'Krysten',
+    //     age: 33,
+    //     hasPets: false
+    // };
+
+    const obj = {
+        a: 'a',
+        number: 11,
+        hungry: true,
+        grammyWins: 1
+    };
+
+    const listAllValues = obj => {
+        let result = [];
+
+        for (let key in obj) {
+            result.push(obj[key]);
+        }
+        return result;
+    };
+    const output = listAllValues(obj);
+    console.log(output);
+    
+    </script>
+    
+</body>
+</html>
