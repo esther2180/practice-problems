@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Object To Array 3</title>
+</head>
+<body>
+
+    <h2>Convert Object To Array 3</h2>
+
+    <h3>Write  a function called "convertObjectToList" which converts an object literal into an array of arrays, like this:</h3>
+    
+    <p>Argument:
+        {
+            name: 'Holly',
+            age: 35,
+            role: 'producer'
+        }
+    </p>
+
+    <p>Return value:</p>
+
+    <p>[['name', 'Holly'], ['age', 35], ['role', 'producer']]</p>
+
+    <p>Note that your function should be able to handle ANY object like this, not just the exact sample provided above.</p>
+
+    <p>E.g., it should also be able to handle this, or any other object containing simple key-value pairs.</p>
+
+    <p>
+    {
+        species: 'canine',
+        name: 'Bowser',
+        weight: 45
+    }
+    </p>
+
+
+    <script>
+
+        const obj = {
+            name: 'Holly',
+            age: 35,
+            role: 'producer'
+        }
+        
+
+        const convertObjectToList = obj => {
+            let result = [];
+
+            for (let i in obj) {
+                result.push([i, obj[i]]);
+            }
+            return result;
+        }
+
+        const output = convertObjectToList(obj);
+        console.log(output);
+    
+    </script>
+
+
+    
+</body>
+</html>
