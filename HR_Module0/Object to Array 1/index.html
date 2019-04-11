@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Object To List</title>
+</head>
+<body>
+
+    <h2>Convert Object To List</h2>
+
+    <h3>Write a function called "getAllKeys" which returns an array of all the input object's keys.</h3>
+
+    <p>Example input:</p>
+
+    <p>{ name : 'Sam', age : 25, hasPets : true }</p>
+
+    <p>Function's return value (output) :</p>
+
+    <p>['name', 'age', 'hasPets']</p>
+
+    <p>Do not use "Object.keys" to solve this prompt.</p>
+
+    <p>Note that your function should be able to handle any object passed in it.</p>
+
+    <p>E.g. it should also handle an input like:</p>
+
+    <p>{ a : 'a', number : 11, hungry : true, grammyWins : 1 }</p>
+
+    <p>['a', 'number', 'hungry', 'grammyWins']</p>
+
+
+    <script>
+
+    // const obj = {
+    //     name: "Sam",
+    //     age: 25,
+    //     hasPets: true
+    // };
+
+    const obj = {
+        a: "a",
+        number: 11,
+        grammyWinds: 1
+    };
+    
+    const getAllKeys = obj => {
+        let result = [];
+
+        for (let prop in obj) {
+            result.push(prop);
+        }
+        return result;
+    }
+
+    const output = getAllKeys(obj);
+    console.log(output);
+
+
+    </script>
+    
+</body>
+</html>
