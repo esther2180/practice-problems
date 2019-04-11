@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Array To Object 3</title>
+</head>
+<body>
+
+    <h2>Convert Array To Object 3</h2>
+
+    <h3>Write a function called "transformEmployeeData" that transforms some employee data from one format to another.</h3>
+
+    <p>The argument will look something like this:</p>
+
+    <p>[
+            [
+                ['firstName', 'Joe'], ['lastName', 'Blow'], ['age', 42], ['role', 'clerk']
+            ],
+            [
+                ['firstName', 'Mary'], ['lastName', 'Jenkins'], ['age', 36], ['role', 'manager']
+            ]
+    ]</p>
+
+    <p>Given that input, the return value should look like this:</p>
+
+    <p>[
+            {firstName: 'Joe', lastName: 'Blow', age: 42, role: 'clerk'},
+            {firstName: 'Mary', lastName: 'Jenkins', age: 36, role: 'manager'}
+        ]
+    </p>
+
+    <p>Note that the input may have a different number of rows or different keys than the given sample.</p>
+
+    <p>For example, let's say the HR department adds a "tshirtSize" field to each employee record. Your code should flexibly accommodate that.</p>
+
+
+    <script>
+    
+    const transformEmployeeData = array => {
+        let emplyeeDataArray = [];
+        let dataObj = {};
+
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++){
+                dataObj[array[i][j][0]] = array[i][j][1];
+            }
+            emplyeeDataArray.push(dataObj);
+            dataObj = {};
+        }
+        return emplyeeDataArray;
+    }
+
+    const output = [
+        [
+            ['firstName', 'Joe'], ['lastName', 'Blow'], ['age', 42], ['role', 'clerk']
+        ],
+        [
+            ['firstName', 'Mary'], ['lastName', 'Jenkins'], ['age', 36], ['role', 'manager']
+        ]
+    ];
+    console.log(transformEmployeeData(output));
+
+
+    </script>
+    
+</body>
+</html>
