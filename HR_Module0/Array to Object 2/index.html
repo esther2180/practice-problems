@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert Array to Object 2</title>
+</head>
+<body>
+
+    <h2>Convert Array to Object 2</h2>
+
+    <h3>Write a function 'fromListToObject' which takes in an array of arrays, and returns an object with each pair of elements in the array as a key-value pair.</h3>
+
+    <p>Example input:</p>
+
+    <p>[['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]]</p>
+
+    <p>Function's return value (output):</p>
+
+    <p>{ make : 'Ford', model : 'Mustang', year : 1964 }</p>
+
+    <p>Do not change the input string. Assume that all elements in the array will be of type 'string'.</p>
+
+    <p>Note that the input may have a different number of elements than the given sample.</p>
+
+    <p>For instance, if the input had 6 values instead of 4, your code should flexibly accommodate that.</p>
+
+
+    <script>
+
+    const fromListToObject = array => {
+        let newObj = {};
+
+        for (let i = 0; i < array.length; i++) {
+            newObj[array[i][0]] = array[i][1];
+        }
+        return newObj;
+    }
+    console.log(fromListToObject([['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]]));
+    
+    </script>
+    
+</body>
+</html>
