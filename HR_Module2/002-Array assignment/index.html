@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variable Juggling 02</title>
+</head>
+<body>
+
+    <h2>Variable Juggling 02</h2>
+
+    <h3>
+        var x = [1, 2, 3];
+        var y = [4, 5, 6];
+        var z = x;
+    </h3>
+
+    <p>
+        z[2] = y[0];
+        z[1] = y[2];
+        y[1] = z[1];
+        x[0] = y[0];
+        x[2] = 1;
+    </p>
+
+    <script>
+    
+    var x = [1, 2, 3];
+    var y = [4, 5, 6];
+    var z = x;
+
+    z[2] = y[0];
+    z[1] = y[2];
+    y[1] = z[1];
+    x[0] = y[0];
+    x[2] = 1;
+
+    var answer = {
+        finalValueOfX: [4, 6, 1], // FILL THIS IN
+        finalValueOfY: [4, 6, 6], // FILL THIS IN
+        finalValueOfZ: x, // FILL THIS IN
+    };
+
+    console.log("answer: finalValueOfX = [4, 6, 1], finalValueOfY = [4, 6, 6], finalValueOfZ = x,");
+
+    // var x = [4, 6, 1];
+    // var y = [4, 6, 6];
+    // var z = x;
+
+    // z[2] = y[0](4);
+    // z[1] = y[2](6);
+    // y[1] = z[1](6);
+    // x[0] = y[0](4);
+    // x[2] = 1;
+    
+    </script>
+
+
+
+    
+</body>
+</html>
