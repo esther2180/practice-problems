@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variable Juggling 01</title>
+</head>
+<body>
+
+    <h2>Variable Juggling 01</h2>
+
+    <h3>
+        var x = 7;
+        var y = 8;
+        var z = 9;
+    </h3>
+
+    <p>
+        x = y + z;
+        z = x;
+        x = y;
+        z = x + y;
+        y = z - x;
+        z = y;
+        x = y * z;
+        z = y / z;
+        x = (z - x) / (y + z);
+        
+    </p>
+        
+
+    <script>
+    
+    var x = 7;
+    var y = 8;
+    var z = 9;
+
+    // x(17) = y(8) + z(9);
+    // z(17) = x(17);
+    // x(8) = y(8);
+    // z(16) = x(8) + y(8);
+    // y(8) = z(16) - x(8);
+    // z(8) = y(8);
+    // x(64) = y(8) * z(8);
+    // z(1) = y(8) / z(8);
+    // x = (z(1) - x(64) = -63) / (y(8) + z(1) = 9);
+
+    x = y + z;
+    z = x;
+    x = y;
+    z = x + y;
+    y = z - x;
+    z = y;
+    x = y * z;
+    z = y / z;
+    x = (z - x) / (y + z);
+
+    /////////////////
+
+    var answer = {
+        finalValueOfX: -7 // CHANGE 'null' to correct answer
+    };
+    console.log("answer: finalValueOfX = -7");
+    </script>
+
+
+
+  
+    
+</body>
+</html>
