@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assert Equal</title>
+</head>
+<body>
+
+    <h2>Assert Equal</h2>
+
+    <h3>Write an assertEqual function from scratch.</h3>
+
+    <p>It should compare actual and expected values with strict equality (not typecasting). Use console.log, not return statements.</p>
+
+    <p>Examples</p>
+
+    <p>SUCCESS CASE</p>
+
+    <p>function multiplyByTwo(n) {
+        return n * 2;
+    }</p>
+
+    <p>var output = multiplyByTwo(2); // returns 4</p>
+
+    <p>assertEqual(output, 4, 'it doubles 2 to 4');</p>
+
+    <p>// console output:</p>
+
+    <p>// passed</p>
+
+    <p>FAILURE CASE</p>
+
+    <p>function multiplyByTwo(n) {
+        return (n * 2) + 1; // an incorrect implementation
+    }</p>
+
+    <p>var output = multiplyByTwo(2); // returns 5</p>
+
+    <p>assertEqual(output, 4, 'it doubles 2 to 4');</p>
+    
+    <p>// console output:</p>
+
+    <p>// FAILED [it doubles 2 to 4] Expected "4", but got "5"</p>
+    
+    
+    <script>
+    
+    function assertEqual(actual, expected, testName) {
+        if (actual === expected) {
+            console.log('passed');
+        } else {
+            console.log('FAILED [' + testName + '] Expected "' + expected + '", but got "' + actual + '"');
+        }
+    }
+
+    function multiplyByTwo(n) {
+        return n * 2;
+    }
+
+    var output = multiplyByTwo(2); // returns 4
+    assertEqual(output, 4, 'it doubles 2 to 4');
+
+    // function multiplyByTwo(n) {
+    //     return (n * 2) + 1; // an incorrect implementation
+    // }
+    // var output = multiplyByTwo(2); // returns 5
+    // assertEqual(output, 4, 'it doubles 2 to 4');
+
+    </script>
+    
+</body>
+</html>
