@@ -11,8 +11,13 @@ function countOccurences(arr, word){
     return count;
 }
 
-function wordLengths(){
+function wordLengths(arr){
+    let result = [];
 
+    for (let i in arr) {
+        result.push(arr[i].length);
+    }
+    return result;
 }
 
 function getMinMaxMean(){
