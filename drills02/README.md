@@ -10,7 +10,7 @@
 
 - getMinMaxMean: given an array of numbers, get the minimum, maximum, and mean numbers. Return them as an object. Mean is another word for average For example:
 	- input [3,1,9,12,4] 
-	- return: {min: 1, max: 12, mean: 25.8}
+	- return: {min: 1, max: 12, mean: 5.8}
 
 - findMode: Given an array of numbers, find the number that occurs the most often for example: 
 	- input [5,2,7,18,2,42,5,2] 
