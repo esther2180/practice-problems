@@ -1,7 +1,8 @@
 
 
-function getPath(){
-
+function getPath(str){
+    let folder = str.split('/');
+    return folder;
 }
 
 function getPathParts(){
