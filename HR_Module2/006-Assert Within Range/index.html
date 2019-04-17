@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assert Within Range</title>
+</head>
+<body>
+
+    <h2>Assert Within Range</h2>
+
+    <h3>Write an "assertWithinRange" function from scratch.</h3>
+
+    <p>SUCCESS CASE IN ACTUAL USE</p>
+
+    <p>var blackjackScore = 20;</p> 
+
+    <p>assertWithinRange(4, 21, blackjackScore, 'blackjack score should be between 4 and 21');</p>
+
+    <p>// console output:</p>
+        
+    <p>// passed</p> 
+
+    <p>SUCCESS CASE IN ACTUAL USE</p>
+        
+    <p>var dieRoll = 1;</p> 
+        
+    <p>assertWithinRange(1, 6, dieRoll, 'die roll should be between 1 and 6');</p> 
+
+    <p>// console output:</p>
+        
+    <p>// passed</p>  
+        
+    <p>FAILURE CASE IN ACTUAL USE</p> 
+
+    <p>var price = 101;</p>
+
+    <p>assertWithinRange(1, 100, price, 'price should be between 1 and 100');</p>
+        
+    <p>// console output:</p> 
+        
+    <p>// FAIL [price should be between 1 and 100] "101" not within range 1 to 100</p>  
+        
+
+    <script>
+        
+        const price = 101;
+
+        const assertWithinRange = (low, high, actual, testName) => {
+            if (actual >= low && actual <= high) {
+                console.log("passed");
+            } else {
+                console.log('FAIL [' + testName + '] "' + actual + '" not within range ' + low + ' to ' + high);
+            }
+        }
+
+        console.log(assertWithinRange(1, 100, price, 'price should be between 1 and 100'));
+    
+    </script>
+    
+</body>
+</html>
