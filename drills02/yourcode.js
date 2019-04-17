@@ -44,8 +44,24 @@ function getMinMaxMean(arr){
     return returnObj;
 }
 
+function findMode(arr) {
+    let mostCount = 1;
+    let count = 0;
+    let item;
+
+    for (let i = 0 ; i < arr.length; i++) {         // take each element 
+        for (let j = i; j < arr.length; j++) {      // set back to [i] element and loop through
+            if (arr[i] === arr[j]) {                // if [i] from first loop & [j] from second loop matches
+                count++;                            // add to count
+            }
+            if (mostCount < count) {                // if mostCout < count
+                mostCount = count;                  // assign count to mostCount
+                item = arr[i]                       // and finally assign that element to item
+            }
+        }
+        count = 0;                                 // reassign count to 0
+    }
+    return item;
+};
 
 
-function findMode(){
-
-}
