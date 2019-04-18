@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apply Assert Equal #2</title>
+</head>
+<body>
+
+    <h2>Apply Assert Equal #2</h2>
+
+    <h3>Write an "assertEqual" function from scratch, from memory.</h3>
+
+    <p>Then use your assertion function to thoroughly test the code.</p>
+
+    <p>Use categorical reasoning to consider all the useful cases.</p>
+
+    <p>Debug the code under test, if necessary.</p>
+
+
+    <script>
+
+    // Assertion function:
+    const assertEqual = (actual, expected, testName) => {
+        if (actual === expected) {
+            console.log('PASSED [' + testName + ']');
+        } else {
+            console.log('FAILED [' + testName + '] expected "' + expected + '", but got "' + actual + '"');
+        }
+    }
+
+    // Code under test:
+    function every (array, callbackFunction) {
+        let doesEveryElementMatch = true;
+        array.forEach(function(element) {
+            doesEveryElementMatch = doesEveryElementMatch && callbackFunction(element);
+        })
+        return doesEveryElementMatch;
+    } 
+
+    function isEven (num) {
+        return num % 2 === 0;
+    }
+
+    // Calss to 'assertEqual':
+    assertEqual(every([2, 4, 6], isEven), true, 'is true when all the values evaluate true');
+    assertEqual(every([1, 2, 3], isEven), false, 'is false when any value evaluates false');
+
+    </script>
+    
+</body>
+</html>
