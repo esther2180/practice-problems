@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apply Assert Arrays Equal</title>
+</head>
+<body>
+
+    <h2>Apply Assert Arrays Equal</h2>
+
+    <h3>Write an "assertArraysEqual" function from scratch, from memory.</h3>
+
+    <p>Then use your assertion function to thoroughly test BOTH the functions in the provided code.</p>
+
+    <p>Use categorical reasoning to consider all the useful cases.</p>
+
+    <p>Debug the code under test, if necessary.</p>
+
+
+    <script>
+    
+    // Your assertion function:
+    const assertArraysEqual = (actual, expected, testName) => {
+        let checkLength = actual.length === expected.length;
+        let checkEachElement = actual.every(function(value, i) {
+            return value === expected[i];
+        });
+        if (checkLength && checkEachElement) {
+            console.log('PASSED [' + testName + ']');
+        } else {
+            console.log('FAILED [' + testName + '] Expected "' + expected + '", but got "' + actual + '"');
+        }
+    }
+
+    // Your code under test:
+    const map = (array, callbackFunction) => {
+        let newArray = [];
+        array.forEach(function(element) {
+            newArray.push(callbackFunction(element));
+        });
+        return newArray;
+    }
+
+    const cubeAll = numbers => {
+        return map (numbers, function(n) {
+            return n * n * n;
+        });
+    }
+
+    const cube = n => n * n * n;
+
+    // Your calls to 'assertArraysEqual':
+    assertArraysEqual(map([1, 2, 3], cube), [1, 8, 27], 'should successfully map an array');
+    assertArraysEqual(cubeAll([1, 2, 3]), [1, 8, 27], 'should successfully map a cubed array');
+    
+    </script>
+    
+</body>
+</html>
