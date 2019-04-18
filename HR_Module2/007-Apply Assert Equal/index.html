@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apply Assert Equal</title>
+</head>
+<body>
+
+    <h2>Apply Assert Equal</h2>
+
+    <h3>Write an "assertEqual" function from scratch, from memory.</h3>
+
+    <p>Examples</p>
+
+    <p>SUCCESS CASE</p>
+
+    <p>function square (n) {
+        return n * n;
+    }</p>
+
+    <p>assertEqual(square(4), 16, 'Square of 4');</p>
+
+    <p>// passed</p>
+
+    <p>FAILURE CASE</p>
+
+    <p>function square (n) {
+        return (n * n); 
+    }</p>
+
+    <p>assertEqual(square(4), 1, 'Square of 4');</p>
+
+    <p>// FAILED [Square of 4] Expected "16", but got "1"</p>
+    
+
+    <script>
+
+    function assertEqual(actual, expected, testName) {
+        if (actual === expected) {
+            console.log('passed');
+        } else {
+            console.log('FAILED [' + testName + '] Expected "' + actual + '", but got "' + expected + '"');
+        }
+    }
+
+    function square(n) {
+    return n * n;
+    }
+
+    console.log(assertEqual(square(4), 16, 'Square of 4'));
+    console.log(assertEqual(square(4), 1, 'Square of 4'));
+    
+    </script>
+    
+</body>
+</html>
