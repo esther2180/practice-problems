@@ -31,10 +31,26 @@ function getCapitalCount(item){
     return result.length;
   }	
 
-function correctCalcChecker(){
+function correctCalcChecker(math){
+  let results = [];
 
+  results = math.filter(obj => {
+    if (doMath(obj.num1, obj.num2, obj.op) === obj.result) {
+      return true;
+    }
+    return false;
+  });
+  return results;
 }
 
-function doMath(){
-
+function doMath(num1, num2, op){
+  if (op === '+') {
+    return num1 + num2;
+  } else if (op === '-') {
+    return num1 - num2;
+  } else if (op === '*') {
+    return num1 * num2;
+  } else if (op === '/') {
+    return num1 / num2;
+  }
 }
