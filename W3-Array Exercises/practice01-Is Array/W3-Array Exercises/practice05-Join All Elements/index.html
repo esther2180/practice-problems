@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Join All Elements in an Array</title>
+</head>
+<body>
+
+    <h2>Join All Elements in an Array</h2>
+
+    <h3>Write a simple JavaScript program to join all elements of the following array into a string. </h3>
+
+    <p>input: myColor = ["Red", "Green", "White", "Black"];</p>
+
+    <p>output: "Red,Green,White,Black"</p>
+    <p>output: "Red,Green,White,Black"</p>
+    <p>output: "Red+Green+White+Black"</p>
+
+
+    <script>
+    
+    const myColor = arr => {
+        console.log(arr.join());
+        console.log(arr.join("+"));
+        console.log(arr.toString());
+    }
+
+    console.log(myColor(["Red", "Green", "White", "Black"]));
+    
+    </script>
+
+    
+</body>
+</html>
