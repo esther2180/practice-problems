@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Current Date</title>
+</head>
+<body>
+
+    <h2>Write a JavaScript program to get the current date</h2>
+
+    <p>Expected Output:</p>
+
+    <p>1. mm-dd-yyyy</p>
+    <p>2. mm/dd/yyyy</p>
+    <p>3. dd-mm-yyyy</p>
+    <p>4. dd/mm/yyyy</p>
+
+    <script>
+    
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1;
+    const yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = `0${dd}`;
+    }
+    if (mm < 10) {
+        mm = `0${mm}`;
+    }
+    today = `${mm}-${dd}-${yyyy}`;
+    console.log("1.", today);
+    today = `${mm}/${dd}/${yyyy}`;
+    console.log("2.", today);
+    today = `${dd}-${mm}-${yyyy}`;
+    console.log("3.", today);
+    today = `${dd}/${mm}/${yyyy}`;
+    console.log("4.", today);
+    
+    </script>
+    
+</body>
+</html>
